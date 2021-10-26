@@ -1,0 +1,14 @@
+html {
+	font-size: $fs-main;
+}
+body {
+	font-family: $mainFont;
+	color: $textMainColor;
+}
+
+.container{
+	width: 1330px;
+	padding: 0 15px;
+	margin: 0 auto;
+	max-width: 100%;
+}
