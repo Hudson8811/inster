@@ -8,16 +8,14 @@
 
 /*libs*/
 
-
 /* main */
 @import "partials/main";
 
 /* components */
 @import "partials/header";
 @import "partials/footer";
-
+@import "partials/navigation";
+@import "partials/social";
 
 /*blocks*/
-
-
-
+@import "blocks/home";

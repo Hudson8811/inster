@@ -1,1 +1,25 @@
 header.header
+	.header__wrapper
+		.header__logo 
+			a.header__logo-link(href="#") Inster
+		.header__burger 
+			span.header__line
+			span.header__line
+		nav.navigation.header__navigation
+			.navigation__mobile-heading
+				+social('navigation__social')
+				button.navigation__close
+					+icon('close')
+			ul.navigation__list
+				li.navigation__item 
+					a.navigation__link.current(href="#") home
+				li.navigation__item 
+					a.navigation__link(href="#") about
+				li.navigation__item 
+					a.navigation__link(href="#") portfolio
+				li.navigation__item 
+					a.navigation__link(href="#") awards
+				li.navigation__item 
+					a.navigation__link(href="#") contacts
+			.navigation__mobile-footer 
+				span.navigation__copy © Inster 2021.

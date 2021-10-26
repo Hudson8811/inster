@@ -1,0 +1,22 @@
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 121px;
+
+	@include max(sm) {
+		width: vws(121);
+	}
+
+	&__link {
+		svg {
+			height: vws(10);
+			width: vws(15);
+
+			@include max(xs) {
+				height: vws(12);
+				width: vws(19);
+			}
+		}
+	}
+}

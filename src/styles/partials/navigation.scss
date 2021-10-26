@@ -1,0 +1,132 @@
+.navigation {
+	padding: 0 0 10px;
+
+	@include min(1600) {
+		padding: 0 0 vw(10);
+	}
+
+	@include max(md) {
+		padding: 0;
+	}
+
+	@include max(sm) {
+		position: absolute;
+		right: -150%;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100vh;
+		width: 100%;
+		background-color: $white;
+		transition: 0.3s linear;
+		padding: vws(24) vws(24) vws(31);
+	}
+
+	&.is-active {
+		right: 0;
+	}
+
+	.navigation__mobile-heading,
+	.navigation__mobile-footer {
+		display: none;
+
+		@include max(sm) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&__list {
+		display: flex;
+
+		@include max(sm) {
+			flex-direction: column;
+			padding-bottom: 37px !important;
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: vw(40);
+
+			@include max(sm) {
+				margin-right: 0;
+			}
+		}
+
+		&:not(:first-child) {
+			@include max(sm) {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: $white;
+		font-size: 13px;
+		text-transform: uppercase;
+		font-weight: 500;
+		transition: color 0.3s;
+		letter-spacing: 0.03em;
+
+		@include max(sm) {
+			color: $black;
+			text-transform: capitalize;
+			font-size: vws(28);
+			line-height: (33 / 28);
+			font-weight: 600;
+		}
+
+		@include min(1600) {
+			font-size: vw(13);
+		}
+
+		@include hover {
+			color: $red;
+		}
+
+		&.current {
+			color: $red;
+		}
+	}
+
+	&__close {
+		position: relative;
+		width: vws(14);
+		height: vws(14);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		padding: 0;
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: vws(40);
+			height: vws(40);
+			left: vws(-13);
+			top: vws(-13);
+			right: vws(-13);
+			bottom: vws(-13);
+			background-color: transparent;
+		}
+
+		svg {
+			height: vws(14);
+			width: vws(14);
+		}
+	}
+
+	&__copy {
+		font-size: 15px;
+		line-height: 18px;
+		font-family: $secondaryFont;
+		font-weight: 400;
+	}
+}

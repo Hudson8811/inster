@@ -1,16 +1,20 @@
 /* media */
 $media-list: (
-	'xxs': 375,
-	'xs': 560,
-	'sm': 767,
-	'md': 1079,
-	'lg': 1279,
-	'xl': 1599,
-	'xxl': 1900
+	"xxs": 375,
+	"xs": 560,
+	"sm": 767,
+	"md": 1079,
+	"lg": 1279,
+	"xl": 1599,
+	"xxl": 1900,
 );
 
 /* шрифты */
-$mainFont: 'Roboto', sans-serif;
+$mainFont: "SF-Pro-Display", sans-serif;
+$secondaryFont: "SF-Pro-Text", sans-serif;
+$fs-main: 16px;
 
 /* цвета */
-$textMainColor: #52525A;
+$black: #000000;
+$white: #ffffff;
+$red: #cf3421;
