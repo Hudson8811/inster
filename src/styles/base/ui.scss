@@ -1,0 +1,57 @@
+.title {
+	font-family: $mainFont;
+
+	&--bigest {
+		font-weight: 600;
+		font-size: 105px;
+		line-height: 90%;
+
+		@include min(1600) {
+			font-size: vw(105);
+		}
+
+		@include max(1400) {
+			font-size: 90px;
+		}
+
+		@include max(md) {
+			font-size: vw(130);
+		}
+
+		@include max(xs) {
+			font-size: vws(40);
+			line-height: 95%;
+		}
+	}
+
+	&--white {
+		color: $white;
+	}
+}
+
+.text {
+	font-family: $secondaryFont;
+
+	&--big {
+		font-weight: 600;
+		font-size: 25px;
+		line-height: 130%;
+		letter-spacing: 0.01em;
+
+		@include min(1600) {
+			font-size: vw(25);
+		}
+
+		@include max(md) {
+			font-size: vw(35);
+		}
+
+		@include max(xs) {
+			font-size: vws(15);
+		}
+	}
+
+	&--white {
+		color: $white;
+	}
+}

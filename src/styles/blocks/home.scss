@@ -2,4 +2,112 @@
 	background: rgb(34, 34, 34) url("./../images/home-bg.jpg") no-repeat center
 		center / cover;
 	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	padding-top: 108px;
+
+	@include min(1600) {
+		padding-top: vw(108);
+	}
+
+	&__container {
+		position: relative;
+		height: 100%;
+	}
+
+	&__content {
+		position: absolute;
+		left: 15px;
+		bottom: 19.5%;
+
+		@include max(sm) {
+			left: 0;
+			width: 100%;
+		}
+
+		@include max(xs) {
+			bottom: 11.1%;
+		}
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 710px;
+		padding-top: vw(36);
+
+		@include min(1600) {
+			width: vw(710);
+		}
+
+		@include max(1400) {
+			padding-top: 0;
+			width: 645px;
+		}
+
+		@include max(md) {
+			width: vw(920);
+		}
+
+		@include max(xs) {
+			width: 100%;
+		}
+	}
+
+	&__text {
+		max-width: 263px;
+		margin-top: 45px;
+
+		@include min(1600) {
+			max-width: vw(263);
+			margin-top: vw(45);
+		}
+
+		@include max(md) {
+			max-width: vw(370);
+			margin-top: vw(45);
+		}
+
+		@include max(xs) {
+			max-width: vws(155);
+			margin-top: vws(50);
+		}
+	}
+
+	&__scroll-down {
+		margin-top: 35px;
+
+		@include min(1600) {
+			margin-top: vw(35);
+		}
+
+		@include max(xs) {
+			margin-top: vws(34);
+		}
+
+		svg {
+			width: 22px;
+			height: 71px;
+
+			@include max(xs) {
+				display: none;
+			}
+
+			&:last-child {
+				display: none;
+
+				@include max(xs) {
+					display: block;
+					height: vws(46);
+					width: vws(14);
+				}
+			}
+
+			@include max(md) {
+				width: vw(35);
+				height: vw(113);
+			}
+		}
+	}
 }

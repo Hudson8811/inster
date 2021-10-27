@@ -1,0 +1,61 @@
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+
+	@include max(sm) {
+		display: none;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		padding: 39px 47px;
+
+		@include min(1600) {
+			padding: vw(35) vw(49);
+		}
+
+		@include max(sm) {
+			padding: vws(40) vws(49);
+		}
+	}
+
+	&__social {
+		.social__link {
+			&:first-child {
+				svg {
+					width: 10px;
+
+					@include min(1600) {
+						width: vw(10);
+					}
+				}
+			}
+			&:not(:last-child) {
+				margin-right: 40px;
+
+				@include min(1600) {
+					margin-right: vw(35);
+				}
+			}
+		}
+		svg {
+			fill: $white;
+		}
+	}
+
+	&__copy {
+		font-size: 15px;
+		line-height: (18 / 15);
+		font-family: $secondaryFont;
+		font-weight: 400;
+		color: $white;
+
+		@include min(1600) {
+			font-size: vw(15);
+		}
+	}
+}

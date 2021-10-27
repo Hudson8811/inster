@@ -4,6 +4,7 @@
 	top: 0;
 	left: 0;
 	right: 0;
+	z-index: 10;
 
 	&__burger {
 		display: none;
@@ -11,7 +12,13 @@
 		@include max(sm) {
 			display: flex;
 			flex-direction: column;
+			justify-content: space-between;
 			position: relative;
+			width: 48px;
+			height: 18px;
+		}
+
+		@include max(xs) {
 			width: vws(24);
 			height: vws(9);
 		}
@@ -20,7 +27,7 @@
 			content: "";
 			position: absolute;
 			width: vws(40);
-			height: (27);
+			height: vws(27);
 			top: vws(-9);
 			bottom: vws(-9);
 			left: vws(-8);
@@ -30,11 +37,11 @@
 
 	&__line {
 		width: 100%;
-		height: vws(2);
+		height: 4px;
 		background-color: #fff;
 
-		&:first-child {
-			margin-bottom: vws(5);
+		@include max(xs) {
+			height: vws(2);
 		}
 	}
 
@@ -68,7 +75,7 @@
 				font-size: vw(30);
 			}
 
-			@include max(sm) {
+			@include max(xs) {
 				font-size: vws(18);
 			}
 		}

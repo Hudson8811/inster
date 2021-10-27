@@ -7,8 +7,13 @@ body {
 }
 
 .container {
-	width: 1330px;
+	width: vw(1326);
 	padding: 0 15px;
 	margin: 0 auto;
 	max-width: 100%;
+
+	@include max(sm) {
+		padding: 0;
+		width: calc(100% - 50px);
+	}
 }
