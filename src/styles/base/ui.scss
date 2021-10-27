@@ -24,6 +24,12 @@
 		}
 	}
 
+	&--medium {
+		font-weight: 600;
+		font-size: vw(46);
+		line-height: (50 / 46);
+	}
+
 	&--white {
 		color: $white;
 	}
@@ -31,6 +37,13 @@
 
 .text {
 	font-family: $secondaryFont;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 140%;
+
+	@include min(1600) {
+		font-size: vw(15);
+	}
 
 	&--big {
 		font-weight: 600;
@@ -49,6 +62,22 @@
 		@include max(xs) {
 			font-size: vws(15);
 		}
+	}
+
+	&--small {
+		font-size: 13px;
+
+		@include min(1600) {
+			font-size: vw(13);
+		}
+	}
+
+	&--red {
+		color: $red;
+	}
+
+	&--upper {
+		text-transform: uppercase;
 	}
 
 	&--white {

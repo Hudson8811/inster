@@ -1,0 +1,167 @@
+.about {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	padding: 100px 0 39px;
+
+	@include max(md) {
+		padding: vws(62) 0 vws(39);
+	}
+
+	@include min(1600) {
+		padding: vw(100) 0 vw(39);
+	}
+
+	&__wrapper {
+		display: flex;
+
+		@include max(md) {
+			flex-direction: column;
+		}
+	}
+
+	&__title {
+		@include max(md) {
+			font-size: 30px;
+		}
+
+		@include max(xs) {
+			font-size: 28px;
+		}
+	}
+
+	&__image {
+		position: relative;
+		width: vw(440);
+		height: vw(440);
+		margin-right: vw(110);
+		flex-shrink: 0;
+
+		@include max(md) {
+			width: 330px;
+			height: 330px;
+		}
+
+		@include max(xs) {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__tag {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: vw(24) vw(42) vw(24) vw(24);
+		z-index: 5;
+		background-color: $black;
+		display: flex;
+		flex-direction: column;
+
+		@include max(md) {
+			padding: 20px 46px 20px 20px;
+		}
+
+		@include max(xs) {
+			padding: 21px 24px;
+		}
+	}
+
+	&__name {
+		font-size: vw(25);
+		@include max(md) {
+			font-size: 20px;
+		}
+	}
+
+	&__rank {
+		font-weight: 500;
+		margin-top: 3px;
+
+		@include max(md) {
+			font-size: 15px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		padding-bottom: vw(18);
+
+		@include max(md) {
+			margin-top: 30px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		margin-top: vw(17);
+
+		@include max(1400) {
+			flex-direction: column;
+			margin-top: vw(25);
+			margin-bottom: vw(25);
+		}
+
+		@include max(md) {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	&__text {
+		max-width: vw(330);
+
+		@include max(sm) {
+			font-size: 15px;
+			line-height: 140%;
+		}
+
+		@include max(1400) {
+			max-width: 100%;
+		}
+		&:first-child {
+			margin-right: vw(86);
+
+			@include max(1400) {
+				margin-right: 0;
+			}
+
+			@include max(md) {
+				margin-top: 30px;
+			}
+		}
+
+		&:last-child {
+			@include max(1400) {
+				margin-top: vw(10);
+			}
+
+			@include max(md) {
+				margin-top: 30px;
+			}
+		}
+	}
+
+	&__links {
+		margin-top: auto;
+		display: flex;
+		flex-wrap: wrap;
+
+		@include max(md) {
+			margin-top: 40px;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		letter-spacing: 0.03em;
+		display: inline-block;
+		margin-top: 11px;
+
+		&:not(:last-child) {
+			margin-right: vw(40);
+		}
+	}
+}
