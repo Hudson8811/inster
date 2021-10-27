@@ -1,0 +1,98 @@
+.contacts {
+	min-height: 100vh;
+	background-color: $black;
+
+	&__container {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+	}
+
+	&__content {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		@include max(950) {
+			flex-direction: column;
+		}
+	}
+
+	&__city {
+		font-family: $secondaryFont;
+		font-style: normal;
+		color: #9e9e9e;
+		font-weight: 500;
+		font-size: 25px;
+		line-height: 140%;
+		margin-top: 17px;
+		display: inline-block;
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-top: vw(80);
+
+		@include max(sm) {
+			margin-top: 30px;
+		}
+	}
+
+	&__type {
+		font-size: 13px;
+		line-height: 16px;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		color: $white;
+
+		margin-top: 30px;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: $white;
+		font-weight: 600;
+		font-size: vw(35);
+		line-height: (42 / 35);
+		margin-top: vw(17);
+
+		@include max(sm) {
+			font-size: 25px;
+			margin-top: 17px;
+		}
+	}
+
+	&__text {
+		max-width: 416px;
+		font-size: 25px;
+
+		@include max(md) {
+			margin-top: 72px;
+		}
+	}
+
+	&__form-row {
+		display: flex;
+		width: vw(660);
+		margin-top: vw(77);
+
+		@include max(md) {
+			width: 100%;
+		}
+
+		@include max(sm) {
+			flex-direction: column;
+			margin-top: 30px;
+		}
+	}
+
+	&__footer {
+		margin-top: vw(65);
+
+		@include max(md) {
+			margin-top: 35px;
+		}
+	}
+}

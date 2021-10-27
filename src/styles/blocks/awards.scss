@@ -1,16 +1,8 @@
 .awards {
 	min-height: 100vh;
-	height: 100vh;
+	min-height: 100vh;
 	background-color: $white;
 	padding: 0;
-
-	@include max(md) {
-		padding: vws(62) 0 vws(39);
-	}
-
-	@include min(1600) {
-		padding: vw(100) 0 vw(39);
-	}
 
 	@include max(sm) {
 		height: auto;
@@ -18,8 +10,7 @@
 
 	&__container {
 		display: flex;
-		min-height: 100%;
-		height: 100%;
+		min-height: 100vh;
 		flex-direction: column;
 		justify-content: center;
 	}
