@@ -3,6 +3,7 @@
 	display: flex;
 	align-items: center;
 	padding: 100px 0 39px;
+	background-color: $white;
 
 	@include max(md) {
 		padding: vws(62) 0 vws(39);
@@ -30,11 +31,18 @@
 		}
 	}
 
+	&__left {
+		margin-right: vw(110);
+
+		@include max(md) {
+			margin-right: 0;
+		}
+	}
+
 	&__image {
 		position: relative;
 		width: vw(440);
 		height: vw(440);
-		margin-right: vw(110);
 		flex-shrink: 0;
 
 		@include max(md) {
@@ -80,6 +88,17 @@
 
 		@include max(md) {
 			font-size: 15px;
+		}
+	}
+
+	&__desc {
+		font-style: italic;
+		margin-top: 10px;
+		display: inline-block;
+		max-width: vw(440);
+
+		@include max(md) {
+			max-width: 330px;
 		}
 	}
 
