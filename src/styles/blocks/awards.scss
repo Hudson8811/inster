@@ -1,0 +1,106 @@
+.awards {
+	min-height: 100vh;
+	height: 100vh;
+	background-color: $white;
+	padding: 0;
+
+	@include max(md) {
+		padding: vws(62) 0 vws(39);
+	}
+
+	@include min(1600) {
+		padding: vw(100) 0 vw(39);
+	}
+
+	@include max(sm) {
+		height: auto;
+	}
+
+	&__container {
+		display: flex;
+		min-height: 100%;
+		height: 100%;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__item {
+		@include max(md) {
+			width: calc(50% - 30px);
+			max-width: 100%;
+			margin-top: 60px;
+		}
+
+		@include max(xs) {
+			width: 100%;
+		}
+	}
+
+	&__image {
+		height: vw(68);
+
+		@include max(md) {
+			height: 68px;
+		}
+
+		@include max(sm) {
+			height: 64px;
+		}
+
+		@include max(xs) {
+			height: 56px;
+		}
+
+		img {
+			height: 100%;
+			width: auto;
+		}
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		margin-top: vw(100);
+
+		@include max(md) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__info {
+		width: 100%;
+		max-width: vw(196);
+
+		@include max(md) {
+			max-width: 200px;
+		}
+
+		@include max(xs) {
+			max-width: 100%;
+		}
+	}
+
+	&__name {
+		margin-top: vw(33);
+		font-weight: 600;
+		text-decoration: none;
+		display: inline-block;
+		color: $black;
+
+		@include max(sm) {
+			margin-top: 33px;
+		}
+
+		@include hover {
+			color: $red;
+		}
+	}
+
+	&__text {
+		margin-top: vw(23);
+
+		@include max(sm) {
+			margin-top: 23px;
+		}
+	}
+}
