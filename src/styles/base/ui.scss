@@ -30,6 +30,12 @@
 		line-height: (50 / 46);
 	}
 
+	&--small {
+		font-weight: 600;
+		font-size: vw(35);
+		line-height: 130%;
+	}
+
 	&--white {
 		color: $white;
 	}

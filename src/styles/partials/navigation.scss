@@ -49,6 +49,8 @@
 	}
 
 	&__item {
+		pointer-events: auto;
+
 		&:not(:last-child) {
 			margin-right: vw(40);
 

@@ -4,6 +4,7 @@
 	left: 0;
 	right: 0;
 	z-index: 10;
+	pointer-events: none;
 
 	@include max(sm) {
 		display: none;
@@ -25,6 +26,7 @@
 
 	&__social {
 		.social__link {
+			pointer-events: auto;
 			&:first-child {
 				svg {
 					width: 10px;
