@@ -1,5 +1,6 @@
 .portfolio {
 	background-color: $white;
+	padding: 0 !important;
 
 	&__item {
 		width: calc(33.333333333333333% - (((28 / 1600)) * 100%));

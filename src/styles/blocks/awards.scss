@@ -1,8 +1,12 @@
 .awards {
 	min-height: 100vh;
-	min-height: 100vh;
 	background-color: $white;
 	padding: 0;
+
+	@include max(1024) {
+		height: auto;
+		padding: 108px 0;
+	}
 
 	@include max(sm) {
 		height: auto;
@@ -13,6 +17,10 @@
 		min-height: 100vh;
 		flex-direction: column;
 		justify-content: center;
+
+		@include max(1024) {
+			min-height: 0;
+		}
 	}
 
 	&__item {
@@ -55,6 +63,7 @@
 
 		@include max(md) {
 			flex-wrap: wrap;
+			margin-top: 0;
 		}
 	}
 

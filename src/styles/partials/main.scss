@@ -4,6 +4,10 @@ html {
 body {
 	font-family: $mainFont;
 	color: $black;
+
+	&.scroll-stopped {
+		overflow: hidden !important;
+	}
 }
 
 .container {

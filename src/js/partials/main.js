@@ -4,8 +4,12 @@ window.addEventListener("DOMContentLoaded", function () {
 
 	const toggleMenu = () => {
 		const nav = document.querySelector(".navigation");
-
 		nav.classList.toggle("is-active");
+		if (nav.classList.contains("is-active")) {
+			document.body.classList.add("scroll-stopped");
+		} else {
+			document.body.classList.remove("scroll-stopped");
+		}
 	};
 
 	function clickHandler(e) {

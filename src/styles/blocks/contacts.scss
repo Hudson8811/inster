@@ -2,10 +2,18 @@
 	min-height: 100vh;
 	background-color: $black;
 
+	@include max(1024) {
+		padding: 108px 0;
+	}
+
 	&__container {
 		min-height: 100vh;
 		display: flex;
 		align-items: center;
+
+		@include max(1024) {
+			min-height: 0;
+		}
 	}
 
 	&__content {

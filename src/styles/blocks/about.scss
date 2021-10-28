@@ -2,15 +2,10 @@
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
-	padding: 0;
 	background-color: $white;
 
-	@include max(md) {
-		padding: vws(62) 0 vws(39);
-	}
-
-	@include min(1600) {
-		padding: vw(100) 0 vw(39);
+	@include max(1024) {
+		padding: 108px 0;
 	}
 
 	&__wrapper {
