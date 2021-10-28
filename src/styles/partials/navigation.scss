@@ -26,6 +26,24 @@
 
 	&.is-active {
 		right: 0;
+
+		.navigation__item {
+			&:nth-child(1) {
+				animation: navAnimation 400ms linear 300ms forwards;
+			}
+			&:nth-child(2) {
+				animation: navAnimation 400ms linear 400ms forwards;
+			}
+			&:nth-child(3) {
+				animation: navAnimation 400ms linear 500ms forwards;
+			}
+			&:nth-child(4) {
+				animation: navAnimation 400ms linear 600ms forwards;
+			}
+			&:nth-child(5) {
+				animation: navAnimation 400ms linear 700ms forwards;
+			}
+		}
 	}
 
 	.navigation__mobile-heading,
@@ -49,6 +67,11 @@
 	}
 
 	&__item {
+		@include max(sm) {
+			transform: translateX(60px);
+			opacity: 0;
+		}
+
 		&:not(:last-child) {
 			margin-right: vw(40);
 
@@ -134,5 +157,17 @@
 		line-height: 18px;
 		font-family: $secondaryFont;
 		font-weight: 400;
+	}
+}
+
+@keyframes navAnimation {
+	0% {
+		opacity: 0;
+		transform: translateX(60px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
 	}
 }

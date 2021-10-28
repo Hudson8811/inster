@@ -1,18 +1,13 @@
 jQuery(document).ready(function ($) {
-	function scrollBehavior() {
-		$(document).on("click", 'a[href^="#"]', function (event) {
-			event.preventDefault();
+	const sr = ScrollReveal({
+		distance: "30%",
+		duration: 2000,
+		delay: 200,
+	});
 
-			$("html, body").animate(
-				{
-					scrollTop: $($.attr(this, "href")).offset().top,
-				},
-				500
-			);
-		});
-	}
-
-	//scrollBehavior();
+	sr.reveal(".header", { origin: "top", delay: 0, duration: 1000 });
+	sr.reveal(".footer", { origin: "bottom", delay: 0, duration: 1000 });
+	sr.reveal(".home__content");
 
 	$(".navigation__link").each((idx, item) => {
 		$(item).on("click", function () {
@@ -25,6 +20,29 @@ jQuery(document).ready(function ($) {
 
 	const scrollAdaptive = (breakpoint) => {
 		if (breakpoint.matches) {
+			sr.reveal(".home__content");
+			sr.reveal(".about__left", {
+				origin: "left",
+				delay: 0,
+				duration: 2000,
+			});
+			sr.reveal(".about__title", { delay: 100 });
+			sr.reveal(".about__row", { delay: 100 });
+			sr.reveal(".about__links", { delay: 100 });
+			sr.reveal(".portfolio__item", {
+				delay: 100,
+				duration: 1000,
+				origin: "left",
+			});
+			sr.reveal(".awards__title", { origin: "left" });
+			sr.reveal(".awards__item", {
+				interval: 200,
+				distance: "60px",
+				origin: "right",
+			});
+			sr.reveal(".contacts__info", { origin: "left" });
+			sr.reveal(".contacts__form", { origin: "right" });
+
 			const PP = $("#pagepiling");
 			PP.attr({
 				style: "",
@@ -44,7 +62,8 @@ jQuery(document).ready(function ($) {
 			PP.find(".pp-tableCell").removeClass("pp-tableCell");
 
 			$("body, html").css({
-				overflow: "initial",
+				overflowY: "initial",
+				overflowX: "hidden",
 				"-ms-touch-action": "none",
 				"touch-action": "none",
 			});
@@ -56,6 +75,39 @@ jQuery(document).ready(function ($) {
 			$(window).off("scroll", scrollHandler);
 			$("#pagepiling").pagepiling({
 				anchors: ["home", "about", "portfolio", "awards", "contacts"],
+
+				onLeave: function (index, nextIndex, direction) {
+					switch (nextIndex) {
+						case 1:
+							sr.reveal(".home__content");
+							break;
+
+						case 2:
+							sr.reveal(".about__left", {
+								origin: "left",
+								delay: 400,
+								duration: 2000,
+							});
+							sr.reveal(".about__title");
+							sr.reveal(".about__row");
+							sr.reveal(".about__links", { delay: 1000 });
+							break;
+						case 3:
+							sr.reveal(".portfolio__item", {
+								delay: 400,
+								duration: 2000,
+							});
+							break;
+						case 4:
+							sr.reveal(".awards__title", { origin: "left" });
+							sr.reveal(".awards__item", { interval: 200, distance: "100px" });
+							break;
+						case 5:
+							sr.reveal(".contacts__info", { origin: "left" });
+							sr.reveal(".contacts__form");
+							break;
+					}
+				},
 
 				afterLoad: function (anchorLink, index) {
 					$(".navigation__link").each((idx, item) => {
@@ -91,6 +143,12 @@ jQuery(document).ready(function ($) {
 	checkWidth();
 
 	function scrollHandler() {
+		if ($(window).scrollTop() > 100) {
+			$(".header").addClass("header--white");
+		} else {
+			$(".header").removeClass("header--white");
+		}
+
 		var $sections = $("section");
 		$sections.each(function (i, el) {
 			var top = $(el).offset().top - 100;
