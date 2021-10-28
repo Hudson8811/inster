@@ -63,11 +63,18 @@
 		justify-content: center;
 		cursor: pointer;
 
+		@include hover {
+			svg {
+				transform: rotate(0deg);
+			}
+		}
+
 		svg {
 			width: vw(30);
 			height: vw(30);
 			transform: rotate(-45deg);
 			stroke: $white !important;
+			transition: all 0.3s;
 
 			@include max(md) {
 				width: 30px;
