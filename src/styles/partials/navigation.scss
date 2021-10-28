@@ -22,6 +22,7 @@
 		transition: 0.3s linear;
 		padding: vws(24) vws(24) vws(31);
 		z-index: 100;
+		pointer-events: auto;
 	}
 
 	&.is-active {
@@ -111,6 +112,7 @@
 		outline: none;
 		background-color: transparent;
 		padding: 0;
+		stroke: $black;
 
 		&::after {
 			content: "";

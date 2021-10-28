@@ -2,8 +2,8 @@
 	background-color: $white;
 
 	&__item {
-		width: vw(506);
-		margin-bottom: vw(41);
+		width: calc(33.33333333% - (((28 / 1600)) * 100%));
+		margin-bottom: 3%;
 
 		@include max(md) {
 			width: calc(50% - 10px);
@@ -76,7 +76,7 @@
 	}
 
 	&__gutter {
-		width: vw(41);
+		width: vw(42);
 
 		@include max(md) {
 			width: 20px;

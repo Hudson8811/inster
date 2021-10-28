@@ -7,6 +7,15 @@
 	z-index: 10;
 	pointer-events: none;
 
+	&--dark {
+		.header__logo-link {
+			color: $black;
+		}
+		.navigation__link {
+			color: $black;
+		}
+	}
+
 	&__burger {
 		display: none;
 
@@ -15,6 +24,7 @@
 			flex-direction: column;
 			justify-content: space-between;
 			position: relative;
+			pointer-events: auto;
 			width: 48px;
 			height: 18px;
 		}
