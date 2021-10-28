@@ -43,6 +43,16 @@
 		img {
 			width: vw(440);
 			height: vw(440);
+
+			@include max(md) {
+				width: 330px;
+				height: 330px;
+			}
+
+			@include max(xs) {
+				width: 100%;
+				height: auto;
+			}
 		}
 
 		&:hover {
