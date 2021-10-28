@@ -29,11 +29,6 @@ jQuery(document).ready(function ($) {
 			sr.reveal(".about__title", { delay: 100 });
 			sr.reveal(".about__row", { delay: 100 });
 			sr.reveal(".about__links", { delay: 100 });
-			sr.reveal(".portfolio__item", {
-				delay: 100,
-				duration: 1000,
-				origin: "left",
-			});
 			sr.reveal(".awards__title", { origin: "left" });
 			sr.reveal(".awards__item", {
 				interval: 200,
@@ -63,8 +58,8 @@ jQuery(document).ready(function ($) {
 
 			$("body, html").css({
 				overflow: "initial",
-				"-ms-touch-action": "none",
-				"touch-action": "none",
+				"-ms-touch-action": "initial",
+				"touch-action": "initial",
 			});
 
 			$("#pp-nav").remove();
@@ -92,10 +87,6 @@ jQuery(document).ready(function ($) {
 							sr.reveal(".about__links", { delay: 1000 });
 							break;
 						case 3:
-							sr.reveal(".portfolio__item", {
-								delay: 400,
-								duration: 2000,
-							});
 							break;
 						case 4:
 							sr.reveal(".awards__title", { origin: "left" });
