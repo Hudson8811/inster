@@ -75,6 +75,11 @@
 		font-size: vw(35);
 		line-height: (42 / 35);
 		margin-top: vw(17);
+		transition: all 0.3s;
+
+		@include hover {
+			color: $red;
+		}
 
 		@include max(sm) {
 			font-size: 25px;
