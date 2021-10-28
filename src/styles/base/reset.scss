@@ -31,7 +31,7 @@ dd {
 	margin: 0;
 }
 
-html{
+html {
 	scroll-behavior: smooth;
 }
 /* Выставляем основные настройки по-умолчанию для body */
@@ -70,6 +70,12 @@ button,
 textarea,
 select {
 	font: inherit;
+}
+
+input,
+textarea {
+	outline: none;
+	border-radius: 0;
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */

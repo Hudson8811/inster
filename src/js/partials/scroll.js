@@ -38,10 +38,10 @@ jQuery(document).ready(function ($) {
 			sr.reveal(".awards__item", {
 				interval: 200,
 				distance: "60px",
-				origin: "right",
+				origin: "left",
 			});
 			sr.reveal(".contacts__info", { origin: "left" });
-			sr.reveal(".contacts__form", { origin: "right" });
+			sr.reveal(".contacts__form", { origin: "bottom" });
 
 			const PP = $("#pagepiling");
 			PP.attr({
