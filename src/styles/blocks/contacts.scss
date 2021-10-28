@@ -35,6 +35,11 @@
 		line-height: 140%;
 		margin-top: 17px;
 		display: inline-block;
+
+		@include min(1600) {
+			font-size: vw(25);
+			margin-top: vw(17);
+		}
 	}
 
 	&__links {
@@ -50,12 +55,17 @@
 
 	&__type {
 		font-size: 13px;
-		line-height: 16px;
+		line-height: (16 / 13);
 		letter-spacing: 0.03em;
 		text-transform: uppercase;
 		color: $white;
 
 		margin-top: 30px;
+
+		@include min(1600) {
+			font-size: vw(13);
+			margin-top: vw(30);
+		}
 	}
 
 	&__link {
@@ -78,6 +88,11 @@
 
 		@include max(md) {
 			margin-top: 72px;
+		}
+
+		@include min(1600) {
+			font-size: vw(25);
+			max-width: vw(416);
 		}
 	}
 

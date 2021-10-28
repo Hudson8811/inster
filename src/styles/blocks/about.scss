@@ -40,6 +40,11 @@
 		height: vw(440);
 		flex-shrink: 0;
 
+		img {
+			width: vw(440);
+			height: vw(440);
+		}
+
 		&:hover {
 			.about__tag {
 				opacity: 1;
@@ -100,10 +105,15 @@
 
 	&__desc {
 		font-style: italic;
-		margin-top: 10px;
-		display: inline-block;
-		max-width: vw(440);
+		margin: 10px auto 0;
+		display: block;
+		max-width: 320px;
 		text-align: center;
+
+		@include min(1600) {
+			font-size: vw(20);
+			max-width: vw(385);
+		}
 
 		@include max(md) {
 			max-width: 330px;

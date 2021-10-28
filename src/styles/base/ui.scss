@@ -136,6 +136,11 @@
 	letter-spacing: 0.03em;
 	padding: 13px 0;
 
+	@include min(1600) {
+		font-size: vw(13);
+		padding: vw(13) 0;
+	}
+
 	&::placeholder {
 		opacity: 0;
 		visibility: hidden;
@@ -156,6 +161,11 @@
 	left: 0;
 	z-index: 2;
 	transition: all 0.3s;
+
+	@include min(1600) {
+		font-size: vw(13);
+		padding: vw(13) 0;
+	}
 }
 
 .input:focus + .label,
@@ -173,11 +183,16 @@
 	color: $white;
 	background-color: $red;
 	font-size: 13px;
-	line-height: 16px;
+	line-height: (16 / 13);
 	text-align: center;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
 	width: vw(220);
+
+	@include min(1600) {
+		padding: vw(12) vw(24);
+		font-size: vw(13);
+	}
 
 	@include max(md) {
 		width: 220px;
