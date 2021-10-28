@@ -62,8 +62,7 @@ jQuery(document).ready(function ($) {
 			PP.find(".pp-tableCell").removeClass("pp-tableCell");
 
 			$("body, html").css({
-				overflowY: "initial",
-				overflowX: "hidden",
+				overflow: "initial",
 				"-ms-touch-action": "none",
 				"touch-action": "none",
 			});
