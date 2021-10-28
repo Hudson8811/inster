@@ -187,3 +187,42 @@
 		width: 100%;
 	}
 }
+
+#pp-nav {
+	&.right {
+		right: 28px;
+	}
+
+	&.is-dark {
+		a {
+			span {
+				background-color: $black;
+			}
+
+			&.active {
+				span {
+					background-color: $red;
+				}
+			}
+		}
+	}
+
+	li {
+		margin: 19px 7px;
+	}
+
+	a {
+		span {
+			background-color: $white;
+			border: none;
+			width: 9px;
+			height: 9px;
+		}
+
+		&.active {
+			span {
+				background-color: $red;
+			}
+		}
+	}
+}

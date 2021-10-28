@@ -22,7 +22,6 @@
 		transition: 0.3s linear;
 		padding: vws(24) vws(24) vws(31);
 		z-index: 100;
-		pointer-events: auto;
 	}
 
 	&.is-active {
@@ -50,8 +49,6 @@
 	}
 
 	&__item {
-		pointer-events: auto;
-
 		&:not(:last-child) {
 			margin-right: vw(40);
 

@@ -3,7 +3,7 @@
 
 	&__item {
 		width: calc(33.333333333333333% - (((28 / 1600)) * 100%));
-		margin-bottom: 3%;
+		margin-bottom: calc((((42 / 1600)) * 100%));
 
 		@include max(md) {
 			width: calc(50% - 10px);

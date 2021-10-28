@@ -1,7 +1,6 @@
 window.addEventListener("DOMContentLoaded", function () {
 	const header = document.querySelector(".header");
 	const portfolioItems = document.querySelectorAll(".portfolio__item");
-	const portfolio = document.querySelector(".portfolio");
 
 	const toggleMenu = () => {
 		const nav = document.querySelector(".navigation");
@@ -37,14 +36,4 @@ window.addEventListener("DOMContentLoaded", function () {
 	};
 
 	document.addEventListener("mouseover", mouseHandler);
-
-	portfolio.addEventListener("click", (e) => {
-		//e.preventDefault();
-		const target = e.target;
-		const button = target.closest(".portfolio__button");
-
-		if (button) {
-			Fancybox.bind(button.closest("li"));
-		}
-	});
 });

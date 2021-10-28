@@ -35,22 +35,22 @@
             </button>
           </div>
           <ul class="navigation__list">
-            <li class="navigation__item"> <a class="navigation__link current" href="#">home</a></li>
-            <li class="navigation__item"> <a class="navigation__link" href="#">about</a></li>
-            <li class="navigation__item"> <a class="navigation__link" href="#">portfolio</a></li>
-            <li class="navigation__item"> <a class="navigation__link" href="#">awards</a></li>
-            <li class="navigation__item"> <a class="navigation__link" href="#">contacts</a></li>
+            <li class="navigation__item"> <a class="navigation__link" href="#home">home</a></li>
+            <li class="navigation__item"> <a class="navigation__link" href="#about">about</a></li>
+            <li class="navigation__item"> <a class="navigation__link" href="#portfolio">portfolio</a></li>
+            <li class="navigation__item"> <a class="navigation__link" href="#awards">awards</a></li>
+            <li class="navigation__item"> <a class="navigation__link" href="#contacts">contacts</a></li>
           </ul>
           <div class="navigation__mobile-footer"> <span class="navigation__copy">© Inster 2021.</span></div>
         </nav>
       </div>
     </header>
     <main class="main" id="pagepiling">
-      <section class="home section">
+      <section class="home section" data-anchor="home" id="home">
         <div class="container home__container">
           <div class="home__content"> 
             <h1 class="title title--bigest title--white home__title">Architectural </br> visualization</h1>
-            <div class="home__row"><a class="home__scroll-down" href="#">
+            <div class="home__row"><a class="home__scroll-down" href="#about">
                 <svg>
                   <use xlink:href="images/sprite.svg#arrow-down"></use>
                 </svg>
@@ -62,7 +62,7 @@
           </div>
         </div>
       </section>
-      <section class="about section">
+      <section class="about section" data-anchor="about" id="about">
         <div class="container">
           <div class="about__wrapper">
             <div class="about__left">
@@ -81,7 +81,7 @@
           </div>
         </div>
       </section>
-      <section class="portfolio section pp-scrollable">
+      <section class="portfolio section pp-scrollable" data-anchor="portfolio" id="portfolio">
         <ul class="portfolio__list">
           <div class="portfolio__gutter"></div>
           <li class="portfolio__item"><img src="images/portfolio/img-1.jpg" alt="">
@@ -196,7 +196,7 @@
           </li>
         </ul>
       </section>
-      <section class="awards section">
+      <section class="awards section" data-anchor="awards" id="awards">
         <div class="container awards__container"> 
           <h2 class="awards__title title title--big">Things We’re proud of</h2>
           <div class="awards__content">
@@ -227,7 +227,7 @@
           </div>
         </div>
       </section>
-      <section class="contacts section">
+      <section class="contacts section" data-anchor="contacts" id="contacts">
         <div class="container contacts__container">
           <div class="contacts__content"> 
             <div class="contacts__info"> 

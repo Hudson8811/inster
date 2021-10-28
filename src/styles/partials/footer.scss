@@ -10,6 +10,18 @@
 		display: none;
 	}
 
+	&--dark {
+		.social__link {
+			svg {
+				fill: $black;
+			}
+		}
+
+		.footer__copy {
+			color: $black;
+		}
+	}
+
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
@@ -27,6 +39,10 @@
 	&__social {
 		.social__link {
 			pointer-events: auto;
+			svg {
+				transition: all 0.3s ease-out;
+			}
+
 			&:first-child {
 				svg {
 					width: 10px;
@@ -41,6 +57,12 @@
 
 				@include min(1600) {
 					margin-right: vw(35);
+				}
+			}
+
+			@include hover {
+				svg {
+					fill: $red;
 				}
 			}
 		}
