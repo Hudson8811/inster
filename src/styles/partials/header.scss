@@ -99,8 +99,8 @@
 		align-items: center;
 		padding: 36px 49px;
 
-		@include max(sm) {
-			padding: vws(22) vws(24);
+		@include max(md) {
+			padding: 24px;
 		}
 
 		@include min(1600) {

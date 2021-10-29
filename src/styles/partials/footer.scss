@@ -31,8 +31,8 @@
 			padding: vw(35) vw(49);
 		}
 
-		@include max(sm) {
-			padding: vws(40) vws(49);
+		@include max(md) {
+			padding: 24px 26px;
 		}
 	}
 
