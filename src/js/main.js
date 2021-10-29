@@ -7,4 +7,4 @@
 //= ./partials/main.js
 //= ./partials/masonry.js
 //= ./partials/scroll.js
-//= ./partials/animation.js
+//= ./partials/validation.js

@@ -9,18 +9,20 @@ section.contacts.section(data-anchor="contacts")#contacts
 					a.contacts__link(href="tel:+79210088576") +79210088576
 					span.contacts__type Mail: 
 					a.contacts__link(href="mailto:hello@insterstudio.com") hello@insterstudio.com
-			.contacts__form
+			form(novalidate).contacts__form
 				p.contacts__text.text.text--big.text--white Drop us a line and let’s make something <span class="text--red">delightful</span>
 				.contacts__form-row 
 					.input-group.contacts__input-group
-						input(type="text" name="name" placeholder="name").input.contacts__input
+						input(type="text" name="name" placeholder="name").input.contacts__input.required
 						label.label.contacts__label name
+						p.contacts__error-text Ошибка
 					.input-group.contacts__input-group
-						input(type="email" name="email" placeholder="email").input.contacts__input
+						input(type="email" name="email" placeholder="email").input.contacts__input.required
 						label.label.contacts__label email
+						p.contacts__error-text Ошибка
 				.contacts__form-row 
 					.input-group.contacts__input-group
-						input(type="text" name="message" placeholder="message").input.contacts__input
+						textarea( name="message" placeholder="message").input.contacts__input
 						label.label.contacts__label Message
 				.contacts__footer 
 					button(type="submit").contacts__button.button Send

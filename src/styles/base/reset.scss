@@ -74,8 +74,22 @@ select {
 
 input,
 textarea {
-	outline: none;
+	background-color: transparent;
+	border: 0;
 	border-radius: 0;
+	outline: 0;
+	box-shadow: none;
+}
+
+::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
+
+textarea {
+	resize: none;
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */

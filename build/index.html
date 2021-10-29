@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <link href="css/main.min.css" rel="stylesheet">
@@ -235,28 +236,30 @@
               <address class="contacts__city">Kaliningrad, Russia</address>
               <div class="contacts__links"> <span class="contacts__type">Phone:</span><a class="contacts__link" href="tel:+79210088576">+79210088576</a><span class="contacts__type">Mail: </span><a class="contacts__link" href="mailto:hello@insterstudio.com">hello@insterstudio.com</a></div>
             </div>
-            <div class="contacts__form">
+            <form class="contacts__form" novalidate>
               <p class="contacts__text text text--big text--white">Drop us a line and let’s make something <span class="text--red">delightful</span></p>
               <div class="contacts__form-row"> 
                 <div class="input-group contacts__input-group">
-                  <input class="input contacts__input" type="text" name="name" placeholder="name">
+                  <input class="input contacts__input required" type="text" name="name" placeholder="name">
                   <label class="label contacts__label">name</label>
+                  <p class="contacts__error-text">Ошибка</p>
                 </div>
                 <div class="input-group contacts__input-group">
-                  <input class="input contacts__input" type="email" name="email" placeholder="email">
+                  <input class="input contacts__input required" type="email" name="email" placeholder="email">
                   <label class="label contacts__label">email</label>
+                  <p class="contacts__error-text">Ошибка</p>
                 </div>
               </div>
               <div class="contacts__form-row"> 
                 <div class="input-group contacts__input-group">
-                  <input class="input contacts__input" type="text" name="message" placeholder="message">
+                  <textarea class="input contacts__input" name="message" placeholder="message"></textarea>
                   <label class="label contacts__label">Message</label>
                 </div>
               </div>
               <div class="contacts__footer"> 
                 <button class="contacts__button button" type="submit">Send</button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
@@ -278,6 +281,17 @@
             </svg></a></div><span class="footer__copy">© Inster 2021.</span>
       </div>
     </footer>
+    <div class="modal">
+      <div class="modal__spinner">
+        <svg class="spinner" viewBox="0 0 50 50">
+          <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+        </svg>
+      </div>
+      <div class="modal__dialog"> 
+        <h4 class="modal__title title--small">Thank you!</h4>
+        <p class="text modal__text">We will contact you soon.</p>
+      </div>
+    </div>
     <script src="js/main.min.js"></script>
   </body>
 </html>

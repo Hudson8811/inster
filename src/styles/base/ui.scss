@@ -108,6 +108,7 @@
 .input-group {
 	position: relative;
 	width: 100%;
+	transform: translateX(0);
 
 	& + .input-group {
 		width: calc(50% - 24px);
@@ -120,6 +121,19 @@
 			margin-top: 30px;
 		}
 	}
+
+	&.has-error {
+		animation: errorAnimation 180ms linear 2 forwards;
+
+		input {
+			border-color: $red;
+		}
+
+		p {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
 }
 
 .input {
@@ -130,7 +144,7 @@
 	background-color: transparent;
 	color: $white;
 	font-family: $secondaryFont;
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 13px;
 	line-height: (16 / 13);
 	letter-spacing: 0.03em;
@@ -170,7 +184,11 @@
 
 .input:focus + .label,
 .input:not(:placeholder-shown) + .label {
-	top: -22px;
+	top: -23px;
+
+	@include min(1600) {
+		top: vw(-23);
+	}
 }
 
 .button {
@@ -239,5 +257,27 @@
 				background-color: $red;
 			}
 		}
+	}
+}
+
+@keyframes errorAnimation {
+	0% {
+		transform: translateX(0px);
+	}
+
+	25% {
+		transform: translateX(3px);
+	}
+
+	50% {
+		transform: translateX(0px);
+	}
+
+	75% {
+		transform: translateX(-3px);
+	}
+
+	100% {
+		transform: translateX(0px);
 	}
 }

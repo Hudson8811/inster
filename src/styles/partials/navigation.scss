@@ -1,5 +1,7 @@
 .navigation {
 	padding: 0 0 10px;
+	position: relative;
+	z-index: 2;
 
 	@include min(1600) {
 		padding: 0 0 vw(10);
