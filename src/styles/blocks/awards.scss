@@ -10,6 +10,7 @@
 
 	@include max(sm) {
 		height: auto;
+		padding: 70px 0;
 	}
 
 	&__container {
@@ -17,17 +18,9 @@
 		min-height: 100vh;
 		flex-direction: column;
 		justify-content: center;
-		width: 100%;
-		max-width: 1326px;
-		padding: 0 15px;
-
-		@include max(1440) {
-			padding: 0 56px;
-		}
 
 		@include max(1024) {
 			min-height: 0;
-			padding: 0 15px;
 		}
 	}
 

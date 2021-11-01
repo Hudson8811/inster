@@ -11,13 +11,15 @@ body {
 }
 
 .container {
-	width: vw(1326);
+	width: 100%;
+	max-width: 1326px;
 	padding: 0 15px;
 	margin: 0 auto;
-	max-width: 100%;
+	@include max(1440) {
+		padding: 0 56px;
+	}
 
 	@include max(sm) {
-		padding: 0;
-		width: calc(100% - 50px);
+		padding: 0 24px;
 	}
 }

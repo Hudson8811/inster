@@ -26,9 +26,13 @@
 		left: 15px;
 		bottom: 19.5%;
 
+		@include max(1440) {
+			left: 56px;
+		}
+
 		@include max(sm) {
-			left: 0;
-			width: 100%;
+			left: 24px;
+			width: calc(100% - 48px);
 		}
 
 		@include max(xs) {
