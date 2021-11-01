@@ -122,11 +122,11 @@
 	&__rank {
 		font-weight: 600;
 		margin-top: 3px;
-		font-size: 14px;
+		font-size: 33px;
 
 		@include max(md) {
 			font-weight: 500;
-			font-size: 15px;
+			font-size: 18px;
 			line-height: 140%;
 		}
 	}
