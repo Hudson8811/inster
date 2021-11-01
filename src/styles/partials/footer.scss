@@ -27,9 +27,9 @@
 		justify-content: space-between;
 		padding: 39px 47px;
 
-		@include min(1600) {
-			padding: vw(35) vw(49);
-		}
+		//@include min(1600) {
+		//	padding: vw(35) vw(49);
+		//}
 
 		@include max(md) {
 			padding: 24px 26px;
@@ -47,17 +47,17 @@
 				svg {
 					width: 10px;
 
-					@include min(1600) {
-						width: vw(10);
-					}
+					//@include min(1600) {
+					//	width: vw(10);
+					//}
 				}
 			}
 			&:not(:last-child) {
 				margin-right: 40px;
 
-				@include min(1600) {
-					margin-right: vw(35);
-				}
+				//@include min(1600) {
+				//	margin-right: vw(35);
+				//}
 			}
 
 			@include hover {
@@ -78,8 +78,8 @@
 		font-weight: 400;
 		color: $white;
 
-		@include min(1600) {
-			font-size: vw(15);
-		}
+		//@include min(1600) {
+		//	font-size: vw(15);
+		//}
 	}
 }

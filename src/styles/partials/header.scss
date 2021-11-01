@@ -103,9 +103,9 @@
 			padding: 24px;
 		}
 
-		@include min(1600) {
-			padding: vw(36) vw(49);
-		}
+		//@include min(1600) {
+		//	padding: vw(36) vw(49);
+		//}
 	}
 
 	&__logo {
@@ -122,9 +122,9 @@
 			position: relative;
 			z-index: 2;
 
-			@include min(1600) {
-				font-size: vw(30);
-			}
+			//@include min(1600) {
+			//	font-size: vw(30);
+			//}
 
 			@include max(xs) {
 				font-size: vws(18);

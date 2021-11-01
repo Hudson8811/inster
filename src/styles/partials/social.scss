@@ -13,10 +13,10 @@
 			height: 18px;
 			width: 24px;
 
-			@include min(1600) {
-				height: vw(18);
-				width: vw(24);
-			}
+			//@include min(1600) {
+			//	height: vw(18);
+			//	width: vw(24);
+			//}
 
 			@include max(xs) {
 				height: vws(12);

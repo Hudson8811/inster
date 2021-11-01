@@ -17,9 +17,17 @@
 		min-height: 100vh;
 		flex-direction: column;
 		justify-content: center;
+		width: 100%;
+		max-width: 1326px;
+		padding: 0 15px;
+
+		@include max(1440) {
+			padding: 0 56px;
+		}
 
 		@include max(1024) {
 			min-height: 0;
+			padding: 0 15px;
 		}
 	}
 
@@ -36,7 +44,7 @@
 	}
 
 	&__image {
-		height: vw(68);
+		height: 68px;
 
 		@include max(md) {
 			height: 68px;
@@ -59,7 +67,7 @@
 	&__content {
 		display: flex;
 		justify-content: space-between;
-		margin-top: vw(100);
+		margin-top: 100px;
 
 		@include max(md) {
 			flex-wrap: wrap;
@@ -69,7 +77,7 @@
 
 	&__info {
 		width: 100%;
-		max-width: vw(196);
+		max-width: 196px;
 
 		@include max(md) {
 			max-width: 200px;
@@ -81,7 +89,7 @@
 	}
 
 	&__name {
-		margin-top: vw(33);
+		margin-top: 33px;
 		font-weight: 600;
 		text-decoration: none;
 		display: inline-block;
@@ -97,7 +105,7 @@
 	}
 
 	&__text {
-		margin-top: vw(23);
+		margin-top: 23px;
 
 		@include max(sm) {
 			margin-top: 23px;

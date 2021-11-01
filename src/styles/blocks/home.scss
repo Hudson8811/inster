@@ -7,8 +7,13 @@
 	flex-direction: column;
 	padding-top: 108px;
 
-	@include min(1600) {
-		padding-top: vw(108);
+	//@include min(1600) {
+	//	padding-top: vw(108);
+	//}
+
+	@include max(sm) {
+		background: rgb(34, 34, 34) url("./../images/home-bg-mobile.jpg") no-repeat
+			center top / cover;
 	}
 
 	&__container {
@@ -36,11 +41,7 @@
 		align-items: center;
 		justify-content: space-between;
 		width: 710px;
-		padding-top: vw(36);
-
-		@include min(1600) {
-			width: vw(710);
-		}
+		padding-top: 36px;
 
 		@include max(1400) {
 			padding-top: 0;
@@ -60,11 +61,6 @@
 		max-width: 263px;
 		margin-top: 45px;
 
-		@include min(1600) {
-			max-width: vw(263);
-			margin-top: vw(45);
-		}
-
 		@include max(md) {
 			max-width: vw(370);
 			margin-top: vw(45);
@@ -79,9 +75,9 @@
 	&__scroll-down {
 		margin-top: 35px;
 
-		@include min(1600) {
-			margin-top: vw(35);
-		}
+		//@include min(1600) {
+		//	margin-top: vw(35);
+		//}
 
 		@include max(xs) {
 			margin-top: vws(34);

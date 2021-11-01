@@ -6,9 +6,9 @@
 		font-size: 105px;
 		line-height: 90%;
 
-		@include min(1600) {
-			font-size: vw(105);
-		}
+		//@include min(1600) {
+		//	font-size: vw(105);
+		//}
 
 		@include max(1400) {
 			font-size: 90px;
@@ -25,7 +25,7 @@
 	}
 
 	&--big {
-		font-size: vw(65);
+		font-size: 65px;
 		line-height: (70 / 65);
 		font-weight: 600;
 
@@ -40,13 +40,13 @@
 
 	&--medium {
 		font-weight: 600;
-		font-size: vw(46);
+		font-size: 46px;
 		line-height: (50 / 46);
 	}
 
 	&--small {
 		font-weight: 600;
-		font-size: vw(35);
+		font-size: 35px;
 		line-height: 130%;
 	}
 
@@ -61,9 +61,9 @@
 	font-size: 15px;
 	line-height: 140%;
 
-	@include min(1600) {
-		font-size: vw(15);
-	}
+	//@include min(1600) {
+	//	font-size: vw(15);
+	//}
 
 	&--big {
 		font-weight: 600;
@@ -71,9 +71,9 @@
 		line-height: 130%;
 		letter-spacing: 0.01em;
 
-		@include min(1600) {
-			font-size: vw(25);
-		}
+		//@include min(1600) {
+		//	font-size: vw(25);
+		//}
 
 		@include max(md) {
 			font-size: vw(35);
@@ -87,9 +87,9 @@
 	&--small {
 		font-size: 13px;
 
-		@include min(1600) {
-			font-size: vw(13);
-		}
+		//@include min(1600) {
+		//	font-size: vw(13);
+		//}
 	}
 
 	&--red {
@@ -150,10 +150,10 @@
 	letter-spacing: 0.03em;
 	padding: 13px 0;
 
-	@include min(1600) {
-		font-size: vw(13);
-		padding: vw(13) 0;
-	}
+	//@include min(1600) {
+	//	font-size: vw(13);
+	//	padding: vw(13) 0;
+	//}
 
 	&::placeholder {
 		opacity: 0;
@@ -176,19 +176,19 @@
 	z-index: 2;
 	transition: all 0.3s;
 
-	@include min(1600) {
-		font-size: vw(13);
-		padding: vw(13) 0;
-	}
+	//@include min(1600) {
+	//	font-size: vw(13);
+	//	padding: vw(13) 0;
+	//}
 }
 
 .input:focus + .label,
 .input:not(:placeholder-shown) + .label {
 	top: -23px;
 
-	@include min(1600) {
-		top: vw(-23);
-	}
+	//@include min(1600) {
+	//	top: vw(-23);
+	//}
 }
 
 .button {
@@ -205,12 +205,12 @@
 	text-align: center;
 	letter-spacing: 0.03em;
 	text-transform: uppercase;
-	width: vw(220);
+	width: 220px;
 
-	@include min(1600) {
-		padding: vw(12) vw(24);
-		font-size: vw(13);
-	}
+	//@include min(1600) {
+	//	padding: vw(12) vw(24);
+	//	font-size: vw(13);
+	//}
 
 	@include max(md) {
 		width: 220px;

@@ -42,6 +42,13 @@ jQuery(document).ready(function ($) {
 			PP.attr({
 				style: "",
 			});
+			PP.find(".pp-section").css({
+				zIndex: "",
+				transform: "",
+				"-webkit-transform": "",
+				"-moz-transform": "",
+				"-ms-transform": "",
+			});
 			PP.find(".pp-section").removeClass(
 				"pp-section pp-table pp-scrollable active pp-easing"
 			);
@@ -67,6 +74,11 @@ jQuery(document).ready(function ($) {
 			$(window).on("scroll", scrollHandler);
 		} else {
 			$(window).off("scroll", scrollHandler);
+			$("body, html").css({
+				overflow: "",
+				"-ms-touch-action": "",
+				"touch-action": "",
+			});
 			$("#pagepiling").pagepiling({
 				anchors: ["home", "about", "portfolio", "awards", "contacts"],
 
