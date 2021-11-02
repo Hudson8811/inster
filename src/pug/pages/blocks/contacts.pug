@@ -3,8 +3,9 @@ section.contacts.section(data-anchor="contacts")#contacts
 		.contacts__content 
 			.contacts__info 
 				h2.title.title--big.title--white Get in touch
-				address.contacts__city Kaliningrad, Russia
 				.contacts__links 
+					span.contacts__type Address:
+					address.contacts__link Kaliningrad, Russia
 					span.contacts__type Phone:
 					a.contacts__link(href="tel:+79210088576") +79210088576
 					span.contacts__type Mail: 
@@ -15,14 +16,15 @@ section.contacts.section(data-anchor="contacts")#contacts
 					.input-group.contacts__input-group
 						input(type="text" name="name" placeholder="name").input.contacts__input.required
 						label.label.contacts__label name
-						p.contacts__error-text Ошибка
+						p.contacts__error-text Error
 					.input-group.contacts__input-group
 						input(type="email" name="email" placeholder="email").input.contacts__input.required
 						label.label.contacts__label email
-						p.contacts__error-text Ошибка
+						p.contacts__error-text Error
 				.contacts__form-row 
 					.input-group.contacts__input-group
 						textarea( name="message" placeholder="message").input.contacts__input
 						label.label.contacts__label Message
 				.contacts__footer 
 					button(type="submit").contacts__button.button Send
+		+social('contacts__social')
