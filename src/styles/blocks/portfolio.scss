@@ -24,7 +24,7 @@
 
 		&.is-active {
 			.portfolio__overlay {
-				opacity: 1;
+				opacity: 1 !important;
 				pointer-events: auto;
 			}
 		}

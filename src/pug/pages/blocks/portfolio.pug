@@ -6,7 +6,7 @@ section.portfolio.section.pp-scrollable(data-anchor="portfolio")#portfolio
 		each item in items
 			li.portfolio__item
 				img(src= item.srcPreview, alt="")
-				.portfolio__overlay
+				.portfolio__overlay(style="opacity: 0;")
 					h3.portfolio__item-name.title--small.title--white!= item.text
 					button.portfolio__button(data-fancybox= item.fancy data-src= item.src)
 						+icon('close')
