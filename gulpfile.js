@@ -68,10 +68,6 @@ function scripts() {
 		.pipe(browserSync.stream());
 }
 
-function loaderScript() {
-	return src("src/js/loader.js").pipe(uglify()).pipe(dest("build/js/"));
-}
-
 function styles() {
 	return src("src/styles/main.scss")
 		.pipe(plumber())
@@ -149,7 +145,6 @@ function cleandist() {
 exports.browsersync = browsersync;
 exports.startwatch = startwatch;
 exports.pugHtml = pugHtml;
-exports.loaderScript = loaderScript;
 exports.scripts = scripts;
 exports.styles = styles;
 exports.fonts = fonts;
@@ -161,7 +156,6 @@ exports.sendPhp = sendPhp;
 exports.build = series(
 	cleandist,
 	pugHtml,
-	loaderScript,
 	fonts,
 	styles,
 	scripts,
@@ -173,7 +167,6 @@ exports.build = series(
 
 exports.default = parallel(
 	pugHtml,
-	loaderScript,
 	fonts,
 	styles,
 	scripts,
