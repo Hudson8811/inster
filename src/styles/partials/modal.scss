@@ -17,7 +17,7 @@
 	background-color: rgba($black, 0.6);
 
 	&.is-active {
-		opacity: 1;
+		opacity: 1 !important;
 		visibility: visible;
 		pointer-events: all;
 
