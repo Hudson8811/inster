@@ -1,12 +1,3 @@
-//window.addEventListener("load", function () {
-//	window.__isLoaded = true;
-//	console.log("window.__isLoaded", window.__isLoaded);
-//});
-
-//window.addEventListener("pageshow", function () {
-//	window.__pageShowed = true;
-//});
-
 window.addEventListener("DOMContentLoaded", function () {
 	const header = document.querySelector(".header");
 	const portfolioItems = document.querySelectorAll(".portfolio__item");
