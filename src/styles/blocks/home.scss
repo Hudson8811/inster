@@ -5,6 +5,10 @@
 	flex-direction: column;
 	padding-top: 108px;
 
+	@include max(1024) {
+		position: relative;
+	}
+
 	&-bg {
 		position: absolute;
 		top: 0;
