@@ -210,7 +210,7 @@ $(document).ready(function () {
 				duration: 1000,
 			});
 		} else {
-			ScrollReveal().reveal(".home__content");
+			ScrollReveal().reveal(".home__content", { reset: true });
 			ScrollReveal().reveal(".home-bg", {
 				opacity: 1,
 				distance: "1px",
@@ -218,23 +218,29 @@ $(document).ready(function () {
 				duration: 3000,
 				origin: "top",
 				easing: "linear",
+				reset: true,
 			});
 			ScrollReveal().reveal(".about__left", {
 				origin: "left",
 				delay: 0,
 				duration: 2000,
+				reset: true,
 			});
-			ScrollReveal().reveal(".about__title", { delay: 100 });
-			ScrollReveal().reveal(".about__row", { delay: 100 });
-			ScrollReveal().reveal(".about__links", { delay: 100 });
-			ScrollReveal().reveal(".awards__title", { origin: "left" });
+			ScrollReveal().reveal(".about__title", { delay: 100, reset: true });
+			ScrollReveal().reveal(".about__row", { delay: 100, reset: true });
+			ScrollReveal().reveal(".about__links", { delay: 100, reset: true });
+			ScrollReveal().reveal(".awards__title", { origin: "left", reset: true });
 			ScrollReveal().reveal(".awards__item", {
 				interval: 200,
 				distance: "60px",
 				origin: "left",
+				reset: true,
 			});
-			ScrollReveal().reveal(".contacts__info", { origin: "left" });
-			ScrollReveal().reveal(".contacts__form", { origin: "bottom" });
+			ScrollReveal().reveal(".contacts__info", { origin: "left", reset: true });
+			ScrollReveal().reveal(".contacts__form", {
+				origin: "bottom",
+				reset: true,
+			});
 		}
 	});
 });
