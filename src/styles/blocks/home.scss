@@ -24,7 +24,7 @@
 			object-fit: cover;
 
 			@include max(md) {
-				object-position: 17% 0%;
+				object-position: left center;
 			}
 
 			@include max(sm) {
@@ -87,7 +87,7 @@
 		margin-top: 45px;
 
 		@include max(md) {
-			max-width: vw(370);
+			max-width: vw(375);
 			margin-top: vw(45);
 		}
 

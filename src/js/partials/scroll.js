@@ -198,7 +198,7 @@ $(document).ready(function () {
 	scrollAnimate();
 
 	$(".animsition").on("animsition.inStart", function () {
-		if (!window.matchMedia("(max-width: 768px)").matches) {
+		if (!window.matchMedia("(max-width: 1024px)").matches) {
 			ScrollReveal().reveal(".header", {
 				origin: "top",
 				delay: 0,
