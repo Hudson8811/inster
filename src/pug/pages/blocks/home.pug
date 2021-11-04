@@ -1,4 +1,9 @@
 section.home.section(data-anchor="home")#home
+	.home-bg 
+		//-img(srcset="images/home-bg-mobile.jpg 640w, images/home-bg-1074w.jpg 1079w, images/home-bg-1.jpg 1920w" sizes="(max-width: 767px) 640px, (max-width: 1079px) 1079px, 1920px" src="images/home-bg-1.jpg" alt="")
+		picture
+			source(media="(max-width: 767px)", srcset="images/home-bg-mobile.jpg")
+			img(src="images/home-bg-1.jpg")
 	.container.home__container
 		.home__content 
 			h1.title.title--bigest.title--white.home__title Architectural </br> visualization
