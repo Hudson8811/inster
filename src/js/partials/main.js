@@ -49,13 +49,23 @@ window.addEventListener("DOMContentLoaded", function () {
 		} else {
 			if (isDesktop) document.removeEventListener("mouseover", mouseHandler);
 			const portfolioItems = document.querySelectorAll(".portfolio__item");
+			const portfolio = document.querySelector(".portfolio");
 
-			portfolioItems.forEach((item) => {
-				item.addEventListener("click", function () {
-					item.classList[
-						item.classList.contains("is-active") ? "remove" : "add"
-					]("is-active");
-				});
+			portfolio.addEventListener("click", function (e) {
+				const target = e.target;
+				const portfolioItem = target.closest(".portfolio__item");
+
+				if (portfolioItem) {
+					portfolioItems.forEach((item) => {
+						if (item === portfolioItem) {
+							item.classList[
+								item.classList.contains("is-active") ? "remove" : "add"
+							]("is-active");
+						} else {
+							item.classList.remove("is-active");
+						}
+					});
+				}
 			});
 		}
 	};
