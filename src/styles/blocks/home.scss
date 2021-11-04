@@ -51,7 +51,7 @@
 			left: 56px;
 		}
 
-		@include max(md) {
+		@media (min-width: 769px) and (max-width: 1079px) {
 			bottom: 30%;
 		}
 
