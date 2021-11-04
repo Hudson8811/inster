@@ -64,6 +64,14 @@ $(document).ready(function () {
 						switch (nextIndex) {
 							case 1:
 								sr.reveal(".home__content");
+								sr.reveal(".home-bg", {
+									opacity: 1,
+									distance: "1px",
+									scale: 1.2,
+									duration: 3000,
+									origin: "top",
+									easing: "linear",
+								});
 								break;
 
 							case 2:
@@ -169,8 +177,24 @@ $(document).ready(function () {
 			sr.reveal(".header", { origin: "top", delay: 0, duration: 1000 });
 			sr.reveal(".footer", { origin: "bottom", delay: 0, duration: 1000 });
 			sr.reveal(".home__content");
+			sr.reveal(".home-bg", {
+				opacity: 1,
+				distance: "1px",
+				scale: 1.2,
+				duration: 3000,
+				origin: "top",
+				easing: "linear",
+			});
 		} else {
 			sr.reveal(".home__content");
+			sr.reveal(".home-bg", {
+				opacity: 1,
+				distance: "1px",
+				scale: 1.2,
+				duration: 3000,
+				origin: "top",
+				easing: "linear",
+			});
 			sr.reveal(".about__left", {
 				origin: "left",
 				delay: 0,

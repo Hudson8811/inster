@@ -1,5 +1,4 @@
 .home {
-	position: relative;
 	min-height: 100vh;
 	height: 100vh;
 	display: flex;
@@ -20,7 +19,7 @@
 			object-fit: cover;
 
 			@include max(md) {
-				object-position: center left;
+				object-position: 17% 0%;
 			}
 
 			@include max(sm) {
