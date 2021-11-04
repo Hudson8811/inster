@@ -119,7 +119,11 @@ function scrollAnimate() {
 
 		scrollAdaptive(breakpoint);
 
-		breakpoint.addEventListener("change", scrollAdaptive);
+		if (breakpoint.addEventListener) {
+			breakpoint.addEventListener("change", scrollAdaptive);
+		} else {
+			breakpoint.addListener(scrollAdaptive);
+		}
 	};
 
 	checkWidth();
