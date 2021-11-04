@@ -51,9 +51,14 @@
 			left: 56px;
 		}
 
+		@include max(md) {
+			bottom: 26%;
+		}
+
 		@include max(sm) {
 			left: 24px;
 			width: calc(100% - 48px);
+			bottom: 19.5%;
 		}
 
 		@include max(xs) {
@@ -87,7 +92,7 @@
 		margin-top: 45px;
 
 		@include max(md) {
-			max-width: vw(375);
+			max-width: vw(430);
 			margin-top: vw(45);
 		}
 
