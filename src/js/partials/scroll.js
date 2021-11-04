@@ -1,9 +1,11 @@
 $(document).ready(function () {
-	const sr = ScrollReveal({
+	ScrollReveal({
 		distance: "30%",
 		duration: 2000,
 		delay: 200,
 	});
+	const sections = document.querySelectorAll(".section");
+
 	function scrollAnimate() {
 		$(".navigation__link").each((idx, item) => {
 			$(item).on("click", function () {
@@ -59,12 +61,36 @@ $(document).ready(function () {
 				});
 				$("#pagepiling").pagepiling({
 					anchors: ["home", "about", "portfolio", "awards", "contacts"],
+					afterRender: function () {
+						if (document.querySelector(".home").classList.contains("active")) {
+							ScrollReveal().reveal(".home__content");
+							ScrollReveal().reveal(".home-bg", {
+								opacity: 1,
+								distance: "1px",
+								scale: 1.2,
+								duration: 3000,
+								origin: "top",
+								easing: "linear",
+							});
+						}
+					},
 
 					onLeave: function (index, nextIndex, direction) {
+						sections.forEach((section) => {
+							section.querySelectorAll("[data-sr-id]").forEach((item) => {
+								if (item.getAttribute("style")) {
+									setTimeout(() => {
+										item.removeAttribute("style");
+										item.removeAttribute("data-sr-id");
+									}, 800);
+								}
+							});
+						});
+
 						switch (nextIndex) {
 							case 1:
-								sr.reveal(".home__content");
-								sr.reveal(".home-bg", {
+								ScrollReveal().reveal(".home__content");
+								ScrollReveal().reveal(".home-bg", {
 									opacity: 1,
 									distance: "1px",
 									scale: 1.2,
@@ -75,27 +101,26 @@ $(document).ready(function () {
 								break;
 
 							case 2:
-								sr.reveal(".about__left", {
+								ScrollReveal().reveal(".about__left", {
 									origin: "left",
 									delay: 400,
 									duration: 2000,
 								});
-								sr.reveal(".about__title");
-								sr.reveal(".about__row");
-								sr.reveal(".about__links", { delay: 1000 });
+								ScrollReveal().reveal(".about__title");
+								ScrollReveal().reveal(".about__row");
 								break;
 							case 3:
 								break;
 							case 4:
-								sr.reveal(".awards__title", { origin: "left" });
-								sr.reveal(".awards__item", {
+								ScrollReveal().reveal(".awards__title", { origin: "left" });
+								ScrollReveal().reveal(".awards__item", {
 									interval: 200,
 									distance: "100px",
 								});
 								break;
 							case 5:
-								sr.reveal(".contacts__info", { origin: "left" });
-								sr.reveal(".contacts__form");
+								ScrollReveal().reveal(".contacts__info", { origin: "left" });
+								ScrollReveal().reveal(".contacts__form");
 								break;
 						}
 					},
@@ -174,20 +199,19 @@ $(document).ready(function () {
 
 	$(".animsition").on("animsition.inStart", function () {
 		if (!window.matchMedia("(max-width: 768px)").matches) {
-			sr.reveal(".header", { origin: "top", delay: 0, duration: 1000 });
-			sr.reveal(".footer", { origin: "bottom", delay: 0, duration: 1000 });
-			sr.reveal(".home__content");
-			sr.reveal(".home-bg", {
-				opacity: 1,
-				distance: "1px",
-				scale: 1.2,
-				duration: 3000,
+			ScrollReveal().reveal(".header", {
 				origin: "top",
-				easing: "linear",
+				delay: 0,
+				duration: 1000,
+			});
+			ScrollReveal().reveal(".footer", {
+				origin: "bottom",
+				delay: 0,
+				duration: 1000,
 			});
 		} else {
-			sr.reveal(".home__content");
-			sr.reveal(".home-bg", {
+			ScrollReveal().reveal(".home__content");
+			ScrollReveal().reveal(".home-bg", {
 				opacity: 1,
 				distance: "1px",
 				scale: 1.2,
@@ -195,22 +219,22 @@ $(document).ready(function () {
 				origin: "top",
 				easing: "linear",
 			});
-			sr.reveal(".about__left", {
+			ScrollReveal().reveal(".about__left", {
 				origin: "left",
 				delay: 0,
 				duration: 2000,
 			});
-			sr.reveal(".about__title", { delay: 100 });
-			sr.reveal(".about__row", { delay: 100 });
-			sr.reveal(".about__links", { delay: 100 });
-			sr.reveal(".awards__title", { origin: "left" });
-			sr.reveal(".awards__item", {
+			ScrollReveal().reveal(".about__title", { delay: 100 });
+			ScrollReveal().reveal(".about__row", { delay: 100 });
+			ScrollReveal().reveal(".about__links", { delay: 100 });
+			ScrollReveal().reveal(".awards__title", { origin: "left" });
+			ScrollReveal().reveal(".awards__item", {
 				interval: 200,
 				distance: "60px",
 				origin: "left",
 			});
-			sr.reveal(".contacts__info", { origin: "left" });
-			sr.reveal(".contacts__form", { origin: "bottom" });
+			ScrollReveal().reveal(".contacts__info", { origin: "left" });
+			ScrollReveal().reveal(".contacts__form", { origin: "bottom" });
 		}
 	});
 });

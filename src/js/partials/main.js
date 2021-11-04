@@ -71,7 +71,7 @@ window.addEventListener("DOMContentLoaded", function () {
 	};
 
 	const checkMedia = () => {
-		const breakpoint = window.matchMedia("(max-width: 767px)");
+		const breakpoint = window.matchMedia("(max-width: 1079px)");
 
 		hoverHandler(breakpoint);
 
