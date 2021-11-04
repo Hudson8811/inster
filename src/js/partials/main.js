@@ -26,19 +26,8 @@ window.addEventListener("DOMContentLoaded", function () {
 
 	let isDesktop = false;
 
-	const mobileHoverHandler = (query) => {
-		if (query.matches) {
-			if (isDesktop) document.removeEventListener("mouseover", mouseHandler);
-			const portfolioItems = document.querySelectorAll(".portfolio__item");
-
-			portfolioItems.forEach((item) => {
-				item.addEventListener("click", function () {
-					item.classList[
-						item.classList.contains("is-active") ? "remove" : "add"
-					]("is-active");
-				});
-			});
-		} else {
+	const hoverHandler = (query) => {
+		if (!query.matches) {
 			isDesktop = true;
 			const mouseHandler = (e) => {
 				const target = e.target;
@@ -58,13 +47,25 @@ window.addEventListener("DOMContentLoaded", function () {
 			};
 
 			document.addEventListener("mouseover", mouseHandler);
+		} else {
+			if (isDesktop) document.removeEventListener("mouseover", mouseHandler);
+			const portfolioItems = document.querySelectorAll(".portfolio__item");
+
+			portfolioItems.forEach((item) => {
+				item.addEventListener("click", function () {
+					item.classList[
+						item.classList.contains("is-active") ? "remove" : "add"
+					]("is-active");
+				});
+			});
 		}
 	};
 
 	const checkMedia = () => {
-		const breakpoint = window.matchMedia("(max-width: 768px)");
-		mobileHoverHandler(breakpoint);
-		breakpoint.addEventListener("change", mobileHoverHandler);
+		const breakpoint = window.matchMedia("(max-width: 767px)");
+
+		hoverHandler(breakpoint);
+		breakpoint.addEventListener("change", hoverHandler);
 	};
 
 	checkMedia();
