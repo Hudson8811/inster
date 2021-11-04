@@ -26,25 +26,24 @@ window.addEventListener("DOMContentLoaded", function () {
 
 	let isDesktop = false;
 
+	const mouseHandler = (e) => {
+		const target = e.target;
+		const portfolio = target.closest(".portfolio");
+		const portfolioItem = target.closest(".portfolio__item");
+		const portfolio__list = target.matches(".portfolio__list");
+
+		if (portfolio__list || !portfolio) {
+			portfolioItems.forEach((item) => item.classList.remove("is-active"));
+		} else if (portfolioItem) {
+			portfolioItems.forEach((item) =>
+				item.classList[item === portfolioItem ? "add" : "remove"]("is-active")
+			);
+		}
+	};
+
 	const hoverHandler = (query) => {
 		if (!query.matches) {
 			isDesktop = true;
-			const mouseHandler = (e) => {
-				const target = e.target;
-				const portfolio = target.closest(".portfolio");
-				const portfolioItem = target.closest(".portfolio__item");
-				const portfolio__list = target.matches(".portfolio__list");
-
-				if (portfolio__list || !portfolio) {
-					portfolioItems.forEach((item) => item.classList.remove("is-active"));
-				} else if (portfolioItem) {
-					portfolioItems.forEach((item) =>
-						item.classList[item === portfolioItem ? "add" : "remove"](
-							"is-active"
-						)
-					);
-				}
-			};
 
 			document.addEventListener("mouseover", mouseHandler);
 		} else {
