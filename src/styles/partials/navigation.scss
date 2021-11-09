@@ -15,6 +15,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
 		width: 100%;
 		background-color: $white;
 		transition: 0.3s linear;
