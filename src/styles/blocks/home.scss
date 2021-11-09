@@ -6,6 +6,10 @@
 	padding-top: 108px;
 	overflow: hidden;
 
+	@include max(md) {
+		height: calc(var(--vh, 1vh) * 100);
+	}
+
 	@include max(1024) {
 		position: relative;
 	}
