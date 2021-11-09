@@ -20,6 +20,10 @@
 		transition: 0.3s linear;
 		padding: vws(24) vws(24) vws(31);
 		z-index: 100;
+
+		@media (max-height: 500px) {
+			padding: 24px 24px 31px;
+		}
 	}
 
 	&.is-active {
@@ -61,6 +65,13 @@
 		@include max(sm) {
 			flex-direction: column;
 			padding-bottom: 37px !important;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+
+		@media (max-height: 500px) {
+			padding: 24px 24px 31px;
+			height: 90%;
 		}
 	}
 
@@ -76,6 +87,10 @@
 			@include max(sm) {
 				margin-right: 0;
 			}
+		}
+
+		@include max(sm) {
+			margin-top: 30px;
 		}
 
 		&:not(:first-child) {
@@ -96,7 +111,7 @@
 		@include max(sm) {
 			color: $black;
 			text-transform: capitalize;
-			font-size: vws(20);
+			font-size: vws(18);
 			line-height: (33 / 28);
 			font-weight: 500;
 			letter-spacing: 0.03em;
