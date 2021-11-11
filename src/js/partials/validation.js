@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 		if (input.value.length < 1) {
 			parent.classList.add("has-error");
-			error.textContent = "Данное поле обязательно";
+			error.textContent = "This field is required.";
 		} else {
 			parent.classList.remove("has-error");
 		}
@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", function () {
 				parent.classList.remove("has-error");
 			} else {
 				parent.classList.add("has-error");
-				error.textContent = "Введен некорректный email";
+				error.textContent = "incorrect email.";
 			}
 		}
 	}
