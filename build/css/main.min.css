@@ -2847,6 +2847,11 @@ body {
   -o-transition: all 0.3s;
   transition: all 0.3s; }
 
+.input:focus,
+.input:hover,
+.input:active {
+  background: transparent; }
+
 .input:not(:-moz-placeholder-shown) + .label {
   top: -23px; }
 
@@ -2861,7 +2866,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 0 transparent inset !important; }
+  -webkit-box-shadow: 0 0 0 0 transparent inset !important;
+  background: transparent; }
 
 .button {
   display: -webkit-inline-box;
