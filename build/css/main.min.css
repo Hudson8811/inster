@@ -3816,7 +3816,8 @@ input:-webkit-autofill:active {
     pointer-events: none;
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
-    transition: all 0.4s; }
+    transition: all 0.4s;
+    cursor: pointer; }
     @media only screen and (max-width: 1079px) {
       .portfolio__overlay {
         padding: 24px; } }
@@ -3839,11 +3840,6 @@ input:-webkit-autofill:active {
         -ms-flex-pack: center;
             justify-content: center;
     cursor: pointer; }
-    @media (min-width: 1080px) {
-      .portfolio__button:hover svg {
-        -webkit-transform: rotate(0deg);
-            -ms-transform: rotate(0deg);
-                transform: rotate(0deg); } }
     .portfolio__button svg {
       width: 30px;
       height: 30px;

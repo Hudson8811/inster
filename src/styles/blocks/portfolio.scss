@@ -49,6 +49,7 @@
 		opacity: 0;
 		pointer-events: none;
 		transition: all 0.4s;
+		cursor: pointer;
 
 		@include max(md) {
 			padding: 24px;
@@ -67,12 +68,6 @@
 		align-items: center;
 		justify-content: center;
 		cursor: pointer;
-
-		@include hover {
-			svg {
-				transform: rotate(0deg);
-			}
-		}
 
 		svg {
 			width: 30px;
