@@ -72,7 +72,6 @@ window.addEventListener("DOMContentLoaded", function () {
 			portfolio.addEventListener("click", function (e) {
 				const target = e.target;
 				const portfolioItem = target.closest(".portfolio__item");
-				console.log(target);
 
 				if (portfolioItem) {
 					portfolioItems.forEach((item) => {
