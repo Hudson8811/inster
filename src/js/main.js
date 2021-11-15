@@ -1,5 +1,5 @@
+//= ./../../node_modules/jquery/dist/jquery.min.js
 //= libs/autoHeight.js
-//= libs/jquery-1.11.1.min.js
 //= libs/animsition.js
 //= libs/scrollreveal.min.js
 //= libs/imagesloaded.pkgd.min.js
