@@ -3840,6 +3840,11 @@ input:-webkit-autofill:active {
         -ms-flex-pack: center;
             justify-content: center;
     cursor: pointer; }
+    @media (min-width: 1080px) {
+      .portfolio__button:hover svg {
+        -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+                transform: rotate(0deg); } }
     .portfolio__button svg {
       width: 30px;
       height: 30px;

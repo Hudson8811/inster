@@ -69,6 +69,12 @@
 		justify-content: center;
 		cursor: pointer;
 
+		@include hover {
+			svg {
+				transform: rotate(0deg);
+			}
+		}
+
 		svg {
 			width: 30px;
 			height: 30px;
