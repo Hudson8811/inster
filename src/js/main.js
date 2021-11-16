@@ -3,9 +3,9 @@
 //= libs/animsition.js
 //= libs/scrollreveal.min.js
 //= libs/imagesloaded.pkgd.min.js
+//= libs/jquery.pagepiling.min.js
 //= libs/masonry.pkgd.min.js
 //= libs/jquery.fancybox.min.js
-//= libs/jquery.pagepiling.min.js
 
 //= ./partials/animation.js
 //= ./partials/scroll.js
