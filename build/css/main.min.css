@@ -3705,6 +3705,9 @@ input:-webkit-autofill:active {
       .portfolio__overlay {
         padding: 24px; } }
   .portfolio__button {
+    position: absolute;
+    right: 2.5625vw;
+    bottom: 2.375vw;
     border: none;
     outline: none;
     background-color: transparent;
@@ -3723,6 +3726,10 @@ input:-webkit-autofill:active {
         -ms-flex-pack: center;
             justify-content: center;
     cursor: pointer; }
+    @media only screen and (max-width: 1079px) {
+      .portfolio__button {
+        bottom: 24px;
+        right: 24px; } }
     .portfolio__button:hover svg {
       -webkit-transform: rotate(0deg);
           -ms-transform: rotate(0deg);
