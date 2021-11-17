@@ -3677,6 +3677,10 @@ input:-webkit-autofill:active {
     .portfolio__item.is-active .portfolio__overlay {
       opacity: 1 !important;
       pointer-events: auto; }
+      .portfolio__item.is-active .portfolio__overlay svg {
+        -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+                transform: rotate(0deg); }
   .portfolio__overlay {
     position: absolute;
     top: 0;

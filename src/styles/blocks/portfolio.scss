@@ -31,6 +31,10 @@
 			.portfolio__overlay {
 				opacity: 1 !important;
 				pointer-events: auto;
+
+				svg {
+					transform: rotate(0deg);
+				}
 			}
 		}
 	}
