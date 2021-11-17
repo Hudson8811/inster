@@ -54,20 +54,18 @@ function pugHtml() {
 }
 
 function scripts() {
-	return (
-		src([
-			//'node_modules/jquery/dist/jquery.min.js',
-			"src/js/main.js",
-		])
-			.pipe(plumber())
-			.pipe(rigger())
-			.pipe(sourcemaps.init())
-			.pipe(concat("main.min.js"))
-			//.pipe(uglify())
-			.pipe(sourcemaps.write("./maps"))
-			.pipe(dest("build/js/"))
-			.pipe(browserSync.stream())
-	);
+	return src([
+		//'node_modules/jquery/dist/jquery.min.js',
+		"src/js/main.js",
+	])
+		.pipe(plumber())
+		.pipe(rigger())
+		.pipe(sourcemaps.init())
+		.pipe(concat("main.min.js"))
+		.pipe(uglify())
+		.pipe(sourcemaps.write("./maps"))
+		.pipe(dest("build/js/"))
+		.pipe(browserSync.stream());
 }
 
 function styles() {
