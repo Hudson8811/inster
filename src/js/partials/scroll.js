@@ -18,6 +18,21 @@ $(document).ready(function () {
 
 		const scrollAdaptive = (breakpoint) => {
 			if (breakpoint.matches) {
+				$(".navigation__link").on("click", function () {
+					var el = $(this);
+					var dest = el.attr("href"); // получаем направление
+					if (dest !== undefined && dest !== "") {
+						// проверяем существование
+						$("html").animate(
+							{
+								scrollTop: $(dest).offset().top, // прокручиваем страницу к требуемому элементу
+							},
+							400 // скорость прокрутки
+						);
+					}
+					return false;
+				});
+
 				const PP = $("#pagepiling");
 				PP.attr({
 					style: "",
