@@ -4,5 +4,5 @@
 		document.documentElement.style.setProperty("--vh", `${vh}px`);
 	}
 	setHeight();
-	window.addEventListener("resize", setHeight);
+	//window.addEventListener("resize", setHeight);
 })();
