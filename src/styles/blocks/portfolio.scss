@@ -31,10 +31,6 @@
 			.portfolio__overlay {
 				opacity: 1 !important;
 				pointer-events: auto;
-
-				svg {
-					transform: rotate(0deg);
-				}
 			}
 		}
 	}
@@ -73,7 +69,7 @@
 		justify-content: center;
 		cursor: pointer;
 
-		@include hover {
+		&:hover {
 			svg {
 				transform: rotate(0deg);
 			}

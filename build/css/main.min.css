@@ -3677,10 +3677,6 @@ input:-webkit-autofill:active {
     .portfolio__item.is-active .portfolio__overlay {
       opacity: 1 !important;
       pointer-events: auto; }
-      .portfolio__item.is-active .portfolio__overlay svg {
-        -webkit-transform: rotate(0deg);
-            -ms-transform: rotate(0deg);
-                transform: rotate(0deg); }
   .portfolio__overlay {
     position: absolute;
     top: 0;
@@ -3727,11 +3723,10 @@ input:-webkit-autofill:active {
         -ms-flex-pack: center;
             justify-content: center;
     cursor: pointer; }
-    @media (min-width: 1080px) {
-      .portfolio__button:hover svg {
-        -webkit-transform: rotate(0deg);
-            -ms-transform: rotate(0deg);
-                transform: rotate(0deg); } }
+    .portfolio__button:hover svg {
+      -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+              transform: rotate(0deg); }
     .portfolio__button svg {
       width: 30px;
       height: 30px;
