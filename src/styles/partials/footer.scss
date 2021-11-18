@@ -12,9 +12,7 @@
 
 	&--dark {
 		.social__link {
-			svg {
-				fill: $black;
-			}
+			color: $black;
 		}
 
 		.footer__copy {

@@ -2691,8 +2691,8 @@ body {
   border-bottom: 2px solid white;
   background-color: transparent;
   color: white;
-  font-family: "SF-Pro-Text", sans-serif;
-  font-weight: 600;
+  font-family: "SF-Pro-Display", sans-serif;
+  font-weight: 500;
   font-size: 13px;
   line-height: 1.23077;
   letter-spacing: 0.03em;
@@ -2958,8 +2958,8 @@ input:-webkit-autofill:active {
   @media only screen and (max-width: 767px) {
     .footer {
       display: none; } }
-  .footer--dark .social__link svg {
-    fill: #141414; }
+  .footer--dark .social__link {
+    color: #141414; }
   .footer--dark .footer__copy {
     color: #141414; }
   .footer__wrapper {
@@ -3046,6 +3046,20 @@ input:-webkit-autofill:active {
     .navigation.is-active .navigation__item:nth-child(5) {
       -webkit-animation: navAnimation 400ms linear 700ms forwards;
               animation: navAnimation 400ms linear 700ms forwards; }
+  @media only screen and (max-width: 560px) {
+    .navigation__social {
+      width: 43.75vw !important; } }
+  .navigation .social__link {
+    color: #141414; }
+    @media only screen and (max-width: 767px) {
+      .navigation .social__link {
+        font-size: 4.375vw;
+        line-height: 1.17857;
+        font-weight: 500;
+        letter-spacing: 0.03em; } }
+    @media only screen and (max-width: 560px) {
+      .navigation .social__link {
+        font-size: 5.625vw; } }
   .navigation .navigation__mobile-heading,
   .navigation .navigation__mobile-footer {
     display: none; }
@@ -3191,17 +3205,18 @@ input:-webkit-autofill:active {
   @media only screen and (max-width: 767px) {
     .social {
       width: 37.8125vw; } }
-  .social__link svg {
-    height: 18px;
-    width: 24px; }
-    @media only screen and (max-width: 560px) {
-      .social__link svg {
-        height: 3.75vw;
-        width: 5.9375vw; } }
-    @media only screen and (max-width: 767px) {
-      .social__link svg {
-        height: 3.125vw;
-        width: 4.6875vw; } }
+  .social__link {
+    color: white;
+    text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    font-weight: 500;
+    font-size: 13px;
+    font-family: "SF-Pro-Display", sans-serif; }
+    @media (min-width: 1080px) {
+      .social__link:hover {
+        color: #df473c; } }
 
 .modal {
   position: fixed;

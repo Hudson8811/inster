@@ -9,24 +9,15 @@
 	}
 
 	&__link {
-		svg {
-			height: 18px;
-			width: 24px;
+		color: $white;
+		text-decoration: none;
+		transition: all 0.3s;
+		font-weight: 500;
+		font-size: 13px;
+		font-family: $mainFont;
 
-			//@include min(1600) {
-			//	height: vw(18);
-			//	width: vw(24);
-			//}
-
-			@include max(xs) {
-				height: vws(12);
-				width: vws(19);
-			}
-
-			@include max(sm) {
-				height: vws(10);
-				width: vws(15);
-			}
+		@include hover {
+			color: $red;
 		}
 	}
 }

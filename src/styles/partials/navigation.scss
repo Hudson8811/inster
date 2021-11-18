@@ -49,6 +49,27 @@
 		}
 	}
 
+	&__social {
+		@include max(xs) {
+			width: vws(140) !important;
+		}
+	}
+
+	.social__link {
+		color: $black;
+
+		@include max(sm) {
+			font-size: vws(14);
+			line-height: (33 / 28);
+			font-weight: 500;
+			letter-spacing: 0.03em;
+		}
+
+		@include max(xs) {
+			font-size: vws(18);
+		}
+	}
+
 	.navigation__mobile-heading,
 	.navigation__mobile-footer {
 		display: none;
