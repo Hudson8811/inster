@@ -164,14 +164,10 @@
 	color: $white;
 	font-family: $mainFont;
 	font-weight: 400;
-	font-size: 25px;
+	font-size: 20px;
 	line-height: (42 / 35);
 	letter-spacing: 0.03em;
 	padding: 13px 0;
-
-	@include max(sm) {
-		font-size: 20px;
-	}
 
 	//@include min(1600) {
 	//	font-size: vw(13);
