@@ -14,10 +14,12 @@ section.contacts.section(data-anchor="contacts")#contacts
 				p.contacts__text.text.text--medium.text--white Drop us a line and let’s make something <span class="text--red">delightful</span>
 				.contacts__form-row 
 					.input-group.contacts__input-group
+						input(type="text" style="display: none;")
 						input(type="text" name="name" placeholder="name" autocomplete="off").input.contacts__input.required
 						label.label.contacts__label name
 						p.contacts__error-text Error
 					.input-group.contacts__input-group
+						input(type="email" style="display: none;")
 						input(type="email" name="email" placeholder="email" autocomplete="off").input.contacts__input.required
 						label.label.contacts__label email
 						p.contacts__error-text Error
