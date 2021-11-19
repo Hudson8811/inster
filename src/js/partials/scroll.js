@@ -35,9 +35,10 @@ $(document).ready(function () {
 		const scrollAdaptive = (breakpoint) => {
 			if (breakpoint.matches) {
 				$(".navigation__link").on("click", function () {
-					var el = $(this)[0];
-					console.log(el);
+					var el = $(this);
 					var dest = el.attr("href"); // получаем направление
+
+					console.log(dest);
 					if (dest !== undefined && dest !== "") {
 						// проверяем существование
 						$("html").animate(
