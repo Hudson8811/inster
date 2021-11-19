@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	const stopAutoScroll = () => {
-		const portfolio = document.querySelector("portfolio");
+		const portfolio = document.querySelector(".portfolio");
 
 		$("[data-fancybox]").fancybox({
 			onInit: function () {
