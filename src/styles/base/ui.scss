@@ -84,6 +84,25 @@
 		}
 	}
 
+	&--medium {
+		font-weight: 500;
+		font-size: 25px;
+		line-height: 130%;
+		letter-spacing: 0.01em;
+
+		//@include min(1600) {
+		//	font-size: vw(25);
+		//}
+
+		@include max(md) {
+			font-size: vw(35);
+		}
+
+		@include max(xs) {
+			font-size: vws(15);
+		}
+	}
+
 	&--small {
 		font-size: 13px;
 
@@ -144,9 +163,9 @@
 	background-color: transparent;
 	color: $white;
 	font-family: $mainFont;
-	font-weight: 500;
-	font-size: 13px;
-	line-height: (16 / 13);
+	font-weight: 400;
+	font-size: 25px;
+	line-height: (42 / 35);
 	letter-spacing: 0.03em;
 	padding: 13px 0;
 
@@ -201,7 +220,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-	-webkit-box-shadow: 0 0 0 0 transparent inset !important;
+	box-shadow: 0 0 0 transparent inset !important;
 	background: transparent;
 }
 
