@@ -35,8 +35,8 @@ $(document).ready(function () {
 		const scrollAdaptive = (breakpoint) => {
 			if (breakpoint.matches) {
 				$(".navigation__link").on("click", function () {
-					var el = $(this);
-					var dest = el.attr("href"); // получаем направление
+					var el = this;
+					var dest = el.getAttribute("href"); // получаем направление
 
 					console.log(dest);
 					if (dest !== undefined && dest !== "") {
