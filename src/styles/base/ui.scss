@@ -169,6 +169,10 @@
 	letter-spacing: 0.03em;
 	padding: 13px 0;
 
+	@include max(sm) {
+		font-size: 20px;
+	}
+
 	//@include min(1600) {
 	//	font-size: vw(13);
 	//	padding: vw(13) 0;
@@ -220,8 +224,9 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 transparent !important;
 	box-shadow: 0 0 0 transparent inset !important;
-	background: transparent;
+	background: transparent !important;
 }
 
 .button {

@@ -2708,6 +2708,9 @@ body {
   line-height: 1.2;
   letter-spacing: 0.03em;
   padding: 13px 0; }
+  @media only screen and (max-width: 767px) {
+    .input {
+      font-size: 20px; } }
   .input::-webkit-input-placeholder {
     opacity: 0;
     visibility: hidden; }
@@ -2760,9 +2763,9 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 transparent inset !important;
-          box-shadow: 0 0 0 transparent inset !important;
-  background: transparent; }
+  -webkit-box-shadow: 0 0 0 transparent !important;
+  box-shadow: 0 0 0 transparent inset !important;
+  background: transparent !important; }
 
 .button {
   display: -webkit-inline-box;
@@ -3954,7 +3957,7 @@ input:-webkit-autofill:active {
     text-decoration: none;
     color: white;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 22px;
     line-height: 1.2;
     margin-top: 17px;
     -webkit-transition: all 0.3s;

@@ -7,18 +7,18 @@ section.contacts.section(data-anchor="contacts")#contacts
 					span.contacts__type Address:
 					address.contacts__link Kaliningrad, Russia
 					span.contacts__type Phone:
-					a.contacts__link(href="tel:+79210088576") +79210088576
+					a.contacts__link(href="tel:+79210088576") +7 921 008 85 76
 					span.contacts__type Mail: 
 					a.contacts__link(href="mailto:hello@insterstudio.com") hello@insterstudio.com
 			form(novalidate).contacts__form
 				p.contacts__text.text.text--medium.text--white Drop us a line and let’s make something <span class="text--red">delightful</span>
 				.contacts__form-row 
 					.input-group.contacts__input-group
-						input(type="text" name="name" placeholder="name").input.contacts__input.required
+						input(type="text" name="name" placeholder="name" autocomplete="off").input.contacts__input.required
 						label.label.contacts__label name
 						p.contacts__error-text Error
 					.input-group.contacts__input-group
-						input(type="email" name="email" placeholder="email").input.contacts__input.required
+						input(type="email" name="email" placeholder="email" autocomplete="off").input.contacts__input.required
 						label.label.contacts__label email
 						p.contacts__error-text Error
 				.contacts__form-row 

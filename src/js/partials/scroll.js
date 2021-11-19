@@ -1,19 +1,18 @@
 $(document).ready(function () {
-	const scrollHandler = () => {
-		const portfolio = document.querySelector("portfolio");
+	const stopAutoScroll = () => {
+		const portfolio = document.querySelector(".portfolio");
 
 		$("[data-fancybox]").fancybox({
-			onLoad: function () {
-				portfolio.style.overflow = "hidden";
+			onInit: function () {
+				portfolio.style.overflowY = "hidden";
 			},
+			afterLoad: function () {},
 
-			afterClose: function () {
-				portfolio.style.overflow = "";
-			},
+			afterClose: function () {},
 		});
 	};
 
-	scrollHandler();
+	stopAutoScroll();
 
 	ScrollReveal({
 		distance: "30%",
