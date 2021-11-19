@@ -1,14 +1,15 @@
 $(document).ready(function () {
 	const stopAutoScroll = () => {
-		const portfolio = document.querySelector(".portfolio");
+		const portfolio = document.querySelector("portfolio");
 
 		$("[data-fancybox]").fancybox({
 			onInit: function () {
 				portfolio.style.overflowY = "hidden";
 			},
-			afterLoad: function () {},
 
-			afterClose: function () {},
+			afterClose: function () {
+				portfolio.style.overflowY = "hidden";
+			},
 		});
 	};
 
