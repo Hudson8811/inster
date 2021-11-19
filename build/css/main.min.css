@@ -3953,8 +3953,8 @@ input:-webkit-autofill:active {
   .contacts__link {
     text-decoration: none;
     color: white;
-    font-weight: 400;
-    font-size: 22px;
+    font-weight: 600;
+    font-size: 25px;
     line-height: 1.2;
     margin-top: 17px;
     -webkit-transition: all 0.3s;
@@ -3966,7 +3966,7 @@ input:-webkit-autofill:active {
         color: #df473c; } }
     @media only screen and (max-width: 767px) {
       .contacts__link {
-        font-size: 20px;
+        font-size: 22px;
         margin-top: 17px; } }
   .contacts__text {
     max-width: 416px;
