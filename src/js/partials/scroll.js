@@ -37,7 +37,7 @@ $(document).ready(function () {
 				$(".navigation__link").on("click", function () {
 					var el = $(this)[0];
 
-					if (!el.attr("href")) {
+					if (!el.attr) {
 						return;
 					}
 					var dest = el.attr("href"); // получаем направление
