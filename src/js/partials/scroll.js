@@ -1,4 +1,20 @@
 $(document).ready(function () {
+	const scrollHandler = () => {
+		const portfolio = document.querySelector("portfolio");
+
+		$("[data-fancybox]").fancybox({
+			onLoad: function () {
+				portfolio.style.overflow = "hidden";
+			},
+
+			afterClose: function () {
+				portfolio.style.overflow = "";
+			},
+		});
+	};
+
+	scrollHandler();
+
 	ScrollReveal({
 		distance: "30%",
 		duration: 2000,
