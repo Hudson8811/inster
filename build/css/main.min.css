@@ -3683,6 +3683,9 @@ input:-webkit-autofill:active {
 .portfolio {
   background-color: white;
   padding: 0 !important; }
+  .portfolio.scroll-stopped {
+    height: 100vh !important;
+    overflow: hidden !important; }
   .portfolio__item {
     width: calc(33.333333333333333% - (((28 / 1600)) * 100%));
     margin-bottom: calc((((42 / 1600)) * 100%)); }

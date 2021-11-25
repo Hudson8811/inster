@@ -2,6 +2,11 @@
 	background-color: $white;
 	padding: 0 !important;
 
+	&.scroll-stopped {
+		height: 100vh!important;
+		overflow: hidden!important;
+	}
+
 	&__item {
 		width: calc(33.333333333333333% - (((28 / 1600)) * 100%));
 		margin-bottom: calc((((42 / 1600)) * 100%));
