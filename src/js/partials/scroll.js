@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	const scrollHandler = () => {
+	const portfolioScrollHandler = () => {
 		const portfolio = document.querySelector(".portfolio");
 		let afterLoadScrollTop = 0;
 
@@ -97,7 +97,7 @@ $(document).ready(function () {
 
 				$(window).on("scroll", scrollHandler);
 			} else {
-				scrollHandler();
+				portfolioScrollHandler();
 				$(window).off("scroll", scrollHandler);
 				$("body, html").css({
 					overflow: "",
